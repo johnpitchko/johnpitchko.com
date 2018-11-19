@@ -12,7 +12,7 @@ safe: false
 
 # edit here to achieve your personal greatness
 url: https://www.johnpitchko.com
-baseurl:
+baseurl: "/"
 title: John Pitchko
 author: John Pitchko
 description: Personal blog and resume

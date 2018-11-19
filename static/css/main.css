@@ -10,7 +10,7 @@ body {
 }
 /* Wrapper for page content to push down footer */
 #wrap {
-  padding-bottom: 50px;	
+  padding-bottom: 50px;
   min-height: 100%;
   height: auto;
   /* Negative indent footer by its height */
@@ -88,7 +88,7 @@ body {
 -------------------------------------------------- */
 
 .container {
-  width: auto;
+  /* width: auto; */
   max-width: 800px;
   text-align: center;
 }
@@ -141,6 +141,7 @@ body {
 }
 .avatar {
   padding-top: 5%;
+  margin-bottom: 3rem;
 }
 .blog-post{
   padding-top: 15px;
@@ -164,7 +165,12 @@ body {
   font-size: 18px;
 }
 
-/* Footer 
+#about h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer
 -------------------------------------------------- */
 
 .footer {
@@ -180,5 +186,5 @@ div.footer{
 /*.footer {
   height: 50px;
   padding-bottom: 15px;
-  
+
 }*/
