@@ -11,3 +11,6 @@ Gemfile.lock
 
 # others
 *.swp
+
+# SASS
+/.sass-cache/

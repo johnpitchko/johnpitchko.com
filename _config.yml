@@ -1,18 +1,13 @@
 # top level stuff you probably don't need to touch
-highlighter: rouge
-markdown: kramdown
 rdiscount:
   extensions: [smart]
 permalink: /:title.html
 paginate: 5
 plugins: [jekyll-paginate, jekyll-seo]
-port: 3000
-safe: false
 
 
 # edit here to achieve your personal greatness
 url: https://www.johnpitchko.com
-baseurl: "/"
 title: John Pitchko
 author: John Pitchko
 description: Personal blog and resume
@@ -29,3 +24,10 @@ google_analytics: UA-79849295-1
 
 # needed for travis-ci build
 exclude: [vendor]
+
+# Collections
+collections:
+  media:
+    output: true
+  books2:
+    output: true

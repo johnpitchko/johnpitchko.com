@@ -1,0 +1,74 @@
+---
+layout: page
+title: Investments
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js" integrity="sha256-MZo5XY1Ah7Z2Aui4/alkfeiq3CopMdV/bbkc/Sh41+s=" crossorigin="anonymous"></script>
+
+<div class="container">
+  <h3>{{ page.title }}</h3>
+  <p>Using Chart.js to display historical performance of my investment portfolio.</p>
+  <p>Eventually plan to use real-time data using Questrade and WealthSimple APIs!</p>
+
+  <canvas id="myChart" width="400" height="400"></canvas>
+
+  <script>
+  var ctx = document.getElementById("myChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["2015", "2016", "2017", "2018"],
+      datasets: [{
+        label: 'LIRA',
+        data: [150117.49, 162713.65, 194342.85, 217774.96],
+        fill: false,
+        borderColor: 'rgba(255,99,132,1)',
+        borderWidth: 3,
+      }, {
+        label: 'RDS.A Shares',
+        data: [ 12402.66, 21571.58, 22068.49, 27831.62 ],
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 3,
+        fill: false,
+      }, {
+        label: 'RRSP',
+        data: [100871.95, 110798.00, 121738.21, 170771.53],
+        borderColor: 'rgba(255, 206, 86, 1)',
+        borderWidth: 3,
+        fill: false,
+      }, {
+        label: 'TFSA',
+        data: [36746.00, 50617.00, 59439.70, 67731.09],
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 3,
+        fill: false,
+      }, {
+        label: 'Margin',
+        data: [27219.00, 46069.00, 54271.19, 12152.23],
+        borderColor: 'rgba(109, 118, 210, 1)',
+        borderWidth: 3,
+        fill: false,
+      }],
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Year',
+            fontSize: 18,
+          },
+
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Value (CAD$)',
+            fontSize: 18,
+          },
+        }]
+      }
+    },
+  });
+  </script>
+</div>
