@@ -8,6 +8,7 @@ plugins: [jekyll-paginate, jekyll-seo]
 
 # edit here to achieve your personal greatness
 url: https://www.johnpitchko.com
+theme: sustain4-theme
 title: John Pitchko
 author: John Pitchko
 description: Personal blog and resume
