@@ -1,0 +1,14 @@
+- name: Blog
+  href: /blog.html
+
+- name: Books
+  href: /books.html
+
+- name: Investments
+  href: /investments.html
+
+- name: Projects
+  href: /projects.html
+
+- name: Resume
+  href: /resume.html
