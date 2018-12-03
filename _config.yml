@@ -16,7 +16,7 @@ email: john@johnpitchko.com
 github: johnpitchko # username
 twitter: johnpitchko
 linkedin: johnpitchko
-stackoverflow: username   #e.g: users/2735833/proton1h1
+# stackoverflow: username   #e.g: users/2735833/proton1h1
 #Comment out if you don't want disqus
 disqus: johnpitchko
 google_analytics: UA-79849295-1
