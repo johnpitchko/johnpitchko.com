@@ -31,3 +31,4 @@ collections:
     output: true
   books2:
     output: true
+    permalink: /:collection/:name.html
