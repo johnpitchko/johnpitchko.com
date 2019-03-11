@@ -1,7 +1,7 @@
 - name: ecobee 4 Thermostat and New Thermostat Wire
-  image-path: ecobee4/
+  image-path: ecobee4
   text: Replaced my thermostat with an ecobee4 smart thermostat. Only a 18/3 wire was used, and since the which meant I had to run an 18/5 wire to provide enough power for the ecobee4.
 
 - name: Custom drawer inserts
-  image-path: drawer-inserts/
+  image-path: drawer-inserts
   text: Built a drawer insert from a 1/4" x 3" hobby board. Easy to cut to create any layout desired. I cut with a handsaw, then glued and nailed by hand. Not pretty but it worked out okay. A mitre saw and a brad gun would make this job real easy.
