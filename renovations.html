@@ -1,0 +1,24 @@
+---
+layout: page
+title: Renovations
+---
+
+{% assign renovations = site.data.renovations %}
+{% if renovations %}
+  {% for project in renovations %}
+    <section class="mb-5">
+    <h4>{{ project.name }}</h4>
+
+    <!-- Source: https://daviseford.com/blog/2017/05/31/jekyll-loop-over-folder.html -->
+    {% for image in site.static_files %}
+    {% if image.path contains project.image-path %}
+        <!-- <a href="{{ site.baseurl }}{{ image.path }}" target="_blank"> -->
+            <img src="{{ site.baseurl }}{{ image.path }}" alt="" class="img-thumbnail" />
+        <!-- </a> -->
+    {% endif %}
+    {% endfor %}
+
+    <p>{{ project.text}}</p>
+    </section>
+  {% endfor %}
+{% endif %}
