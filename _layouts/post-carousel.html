@@ -21,10 +21,8 @@ layout: default
       </ol>
 
       <div class="carousel-inner">
-        {% assign firstItem = true %}
-
         {% for image in page.carousel %}
-          {% if firstItem %}
+          {% if forloop.first %}
             <div class="carousel-item active">
             {% assign firstItem = false %}
           {% else %}
