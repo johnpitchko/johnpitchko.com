@@ -12,25 +12,14 @@ layout: default
     <div id="carousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         {% for image in page.carousel %}
-          {% if forloop.first %}
-            <li data-target="#carousel" data-slide-to={{ forloop.index0 }} class="active"></li>
-          {% else %}
-            <li data-target="#carousel" data-slide-to={{ forloop.index0 }}></li>
-          {% endif %}
+            <li data-target="#carousel" data-slide-to={{ forloop.index0 }} {% if forloop.first %} class="active" {% endif %}></li>
         {% endfor %}
       </ol>
 
       <div class="carousel-inner">
         {% for image in page.carousel %}
-          {% if forloop.first %}
-            <div class="carousel-item active">
-            {% assign firstItem = false %}
-          {% else %}
-            <div class="carousel-item">
-          {% endif %}
-
+            <div class="carousel-item {% if forloop.first %} active {% endfor %}">
               <img src="{{ image }}" class="d-block w-100" />
-
             </div>
         {% endfor %}
 
