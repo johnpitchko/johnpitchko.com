@@ -35,7 +35,7 @@ collections:
     permalink: /:collection/:name.html
   renovations:
     output: true
-    image_path: /assets/img/renovations
+    permalink: /:collection/:name.html
 
 # Plugins
 plugins:
