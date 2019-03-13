@@ -10,6 +10,16 @@ layout: default
 
   <!-- Source: https://daviseford.com/blog/2017/05/31/jekyll-loop-over-folder.html -->
     <div id="carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {% for image in page.carousel %}
+          {% if forloop.first %}
+            <li data-target="#carousel" data-slide-to={{ forloop.index0 }} class="active"></li>
+          {% else %}
+            <li data-target="#carousel" data-slide-to={{ forloop.index0 }}></li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+
       <div class="carousel-inner">
         {% assign firstItem = true %}
 
@@ -38,4 +48,5 @@ layout: default
     </div>
 
   <p>{{ content }}</p>
+
 </div>
