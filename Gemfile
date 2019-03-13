@@ -9,5 +9,5 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-seo"
   gem "jekyll-admin"
-  gem "jekyll-compress-images"
+  # gem "jekyll-compress-images"
 end

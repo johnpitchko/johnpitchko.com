@@ -39,7 +39,7 @@ collections:
 
 # Plugins
 plugins:
-  - jekyll-compress-images
+  # - jekyll-compress-images
 
 imageoptim:
   # Disabling svgo because it throws some error
