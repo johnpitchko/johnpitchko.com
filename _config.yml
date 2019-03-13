@@ -33,6 +33,9 @@ collections:
   books2:
     output: true
     permalink: /:collection/:name.html
+  renovations:
+    output: true
+    image_path: /assets/img/renovations
 
 # Plugins
 plugins:
