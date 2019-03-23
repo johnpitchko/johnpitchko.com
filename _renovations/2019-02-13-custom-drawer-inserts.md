@@ -1,6 +1,6 @@
 ---
 layout: post-carousel
-title: Custom drawner inserts
+title: Custom drawer inserts
 carousel:
   - /assets/img/renovations/drawer-inserts-1.jpg
   - /assets/img/renovations/drawer-inserts-2.jpg
