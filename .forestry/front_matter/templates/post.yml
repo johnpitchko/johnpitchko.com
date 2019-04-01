@@ -11,6 +11,6 @@ fields:
   config:
     required: true
   default: post
-  hidden: true
+  hidden: false
 pages:
 - _posts/Test.md
