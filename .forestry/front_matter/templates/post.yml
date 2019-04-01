@@ -1,4 +1,12 @@
 ---
 label: Post
 hide_body: false
-fields: []
+fields:
+- type: textarea
+  name: content
+  label: Content
+  description: Content goes here
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
