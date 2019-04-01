@@ -10,16 +10,6 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-- type: directory
-  path: _books2
-  label: Books2
-  create: all
-  match: "**/*"
-- type: directory
-  path: _media
-  label: Media
-  create: all
-  match: "**/*"
 upload_dir: assets/uploads
 public_path: assets/uploads
 front_matter_path: ''
