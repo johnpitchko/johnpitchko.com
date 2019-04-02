@@ -13,4 +13,5 @@ fields:
   default: post
   hidden: true
 pages:
+- _posts/x-tips-on-coaching.md
 - _posts/Test.md
