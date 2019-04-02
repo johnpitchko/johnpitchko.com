@@ -1,0 +1,16 @@
+---
+label: Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: layout
+  label: layout
+  config:
+    required: true
+  default: post
+  hidden: true
+pages:
+- _posts/Test.md
