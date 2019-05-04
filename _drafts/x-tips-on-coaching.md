@@ -8,7 +8,7 @@ A colleague shared a slide pack on coaching that she received from a training se
 
 1. There is a difference between _mentoring_ and _coaching_. Mentoring involves sharing your expertise and providing advice. Coaching leads the client through a journey of self-discovery using an inquiry-based approach.
 2. Coaches should always ask themselves, "Is coaching the right thing, right now?" Coaching is not always the best approach for every situation. Sometimes, the client is seeking, or needs, some direct and specific advice.   
-     
+
    Also, coaching only works when both parties are in the right frame of mind. If either party is not open to coaching at that particular moment, the session could be frustrating and ineffective.
 3. Remember to **W.A.I.T.** (Why Am I Talking?). Coaches need to prioritize active listening over speaking. A quality coach waits for their turn to speak, only doing so when the time is right. When sharing, coaches should stick to facts and avoid opinions. Only share what is important and do so in a brief, concise manner.
 4. Share observations and invite interpretations. Again, do not give opinions but say what you observed the client say or behave. Ask the client to analyze their words to discover insights.
@@ -18,7 +18,7 @@ A colleague shared a slide pack on coaching that she received from a training se
    3. "How will you know you have achieved success?"
    4. "What are the steps?"
 6. Ask curious questions. Probe deep to allow the client to come to their own conclusions and realizations. When the client unlocks their own wisdom, they become much more likely to integrate it into their being.  
-     
+
    Some curious questions:
    1. "Can you tell me more about that?"
    2. "How have you solved problems like this before?"
