@@ -1,7 +1,10 @@
 ---
 layout: post
-title: "Wealthsimple vs Questrade XGRO: Part 1"
+title: "Wealthsimple vs Questrade XGRO"
+permalink: "/wealthsimple-vs-questrade-xgro/"
 ---
+
+[View the performance chart]({{ site.baseurl}}/wealthsimple-vs-questrade-xgro-chart/)
 
 This experiment will compare the overall real performance of a robo-advisor (specifically Wealthsimple) versus a diversified single index exchange traded fund (ETF) purchased through a discount brokerage (specifically XGRO purchased through Questrade). These investment approaches are being compared because they offer low-fee investments that are aggressive and sufficiently diversified. They are also extremely easy to purchase and require no on-going maintenance from the investor.
 
