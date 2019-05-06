@@ -7,3 +7,4 @@ I was passed this article by Peter F. Rucker and published Harvard Business Revi
 
 * **Concentrate on one task at a time.** Easier said than done, but multi-tasking does not provide the creativity and attention-to-detail that can be created by focusing on a single activity at a time.
 * **Set priorities and stick with them.** Maintain a ranked list of all the activities that need to be done, and focus exclusively at the top-priority. WHen that task is complete, review the list to reset priorities and move on to the new top-priority.
+* **Focus on jobs you will do especially well. No one executive is** 
