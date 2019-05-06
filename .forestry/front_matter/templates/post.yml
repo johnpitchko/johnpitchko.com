@@ -13,5 +13,6 @@ fields:
   default: post
   hidden: true
 pages:
+- _posts/what-makes-an-effective-executive.md
 - _posts/x-tips-on-coaching.md
 - _posts/Test.md
