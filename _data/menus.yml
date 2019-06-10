@@ -1,0 +1,52 @@
+---
+navbar:
+  - url: /about-me
+    title: About Me
+    identifier: about-me
+
+  - url: /blog
+    title: Blog
+    identifier: blog
+
+  - url: /projects
+    title: Projects
+    identifier: projects
+
+  - url: /resume
+    title: Resume
+    identifier: resume
+
+  - url: /books
+    title: Book Summaries
+    identifier: books
+---
+
+
+
+
+
+
+
+# - name: About Me
+#   href: /about-me.html
+#
+# - name: Blog
+#   href: /blog.html
+#
+# - name: Projects
+#   href: /projects.html
+#
+# - name: Renovations
+#   href: /renovations.html
+#
+# - name: Book Summaries
+#   href: /books.html
+#
+# - name: The Experiment
+#   href: /wealthsimple-vs-questrade-xgro-chart/
+#
+# # - name: Projects
+#   # href: /projects.html
+#
+# - name: Resume
+#   href: /resume.html
