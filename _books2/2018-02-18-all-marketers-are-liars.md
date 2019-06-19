@@ -1,5 +1,4 @@
 ---
-layout: post
 title: All Marketers are Liars
 author: Seth Godin
 ---

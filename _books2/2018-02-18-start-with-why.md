@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Start with Why
 author: Simon Sinek
 ---

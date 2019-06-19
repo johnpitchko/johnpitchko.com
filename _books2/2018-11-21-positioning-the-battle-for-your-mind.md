@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Positioning: The Battle for your Mind"
 authors: "Al Ries and Jack Trout"
 ---

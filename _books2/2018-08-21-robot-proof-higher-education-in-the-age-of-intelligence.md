@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Robot-proof: Higher Education in the Age of Intelligence'
 author: Joseph E. Aoun
 ---

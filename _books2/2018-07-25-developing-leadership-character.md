@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Developing Leadership Character
 author: Mary Crossan, Gerard Seijts, and Jeffrey Gandz
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The Ordinary Leader
 author: Randy Grieser
 ---

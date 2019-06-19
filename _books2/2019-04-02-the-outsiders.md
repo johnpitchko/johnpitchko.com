@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The Outsiders
 author: William N. Thorndike Jr.
 ---

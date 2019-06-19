@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Rejection Proof
 author: Jia Jiang
 ---

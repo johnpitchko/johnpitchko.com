@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Eight things I learned about the Alberta Tuition Framework
 ---
 

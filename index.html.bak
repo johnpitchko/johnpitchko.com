@@ -14,6 +14,5 @@ layout: home
 		<h3 class="mt-5">Learn more <a href="{{ site.baseurl }}about-me.html">about me</a> or check out my <a href="{{ site.baseurl }}resume.html">resume</a>.</h3>
 		<!-- <h3>Read <a href="{{ site.baseurl }}books.html">summaries of leadership books I've read</a> (mostly so I don't forget what I've read).</h3> -->
 		<h3>Want to work together? Contact me at <a href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a> or by <a href="mailto:{{ site.email }}">email</a>.</h3>
-		{% include social.html %}
 	</div>
 </section>

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Fixing your Environment for Homebrew Ruby
 ---
 
