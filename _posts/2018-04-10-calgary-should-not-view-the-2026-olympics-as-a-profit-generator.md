@@ -1,0 +1,23 @@
+---
+id: 666
+title: Calgary should not view the 2026 Olympics as a profit-generator
+date: 2018-04-10T09:35:16+00:00
+author: John Pitchko
+
+guid: http://35.182.253.99/?p=666
+permalink: /calgary-should-not-view-the-2026-olympics-as-a-profit-generator/
+image: /wp-content/uploads/Canada_olympic_park_summer_2005-740x430.jpeg
+categories:
+  - Uncategorized
+---
+Ward 9 Councillor Gian-Carlo Carra posted a <a href="http://www.gccarra.ca/ward-tv-lite/2018/3/calgary-and-the-2026-olympic-bid-process">video on his website on March 28, 2018 regarding the status of Calgary's proposed bid for the 2026 Winter Olympic Games</a>. I respect the councillor for speaking candidly to citizens about his opinions regarding this matter. In his brief message, he states that "a basic requirement of hosting the... Games would be to turn a strong profit", which is an unsettling perspective for a municipal leader.
+
+Councillor Carra's statement is concerning because municipalities should not operate in a profit-seeking manner. Seeking profits introduces risk - just ask any small business owner. Earning a profit is never guaranteed, regardless of how much planning is done. In the context of the Olympics, profitability rarely, if ever, occurs. <a href="http://www.cbc.ca/news/canada/british-columbia/vancouver-2010-winter-olympics-debt-free-vanoc-final-report-says-1.2695994">Financial analysis after the 2010 games in Vancouver</a> revealed that the event only just broke even. The conclusion from the report conveniently does not include the $388 million cost overrun for expanding the Vancouver Convention Centre. Fortunately for Vancouver, their games wrapped up in a better position than many other host cities.
+
+The financial outcome of hosting the Olympic games has been grim for other host cities. The recently concluded <a href="https://www.cnbc.com/2018/02/15/south-koreas-pyeongchang-winter-olympics-costs-benefits-of-hosting.html">2018 Olympic Winter games in Pyeongchang are expected to cost $13 billion</a> - more than double the initial estimate. In fact, the final costs for every Olympic Games since 2000 have overrun their initial budgets. If Calgary were to experience the same fate, the city could be saddled with massive amounts of new debt. Future tax revenue from hard-working Calgarians would be diverted towards debt-repayment instead of operating and expanding city services. The city would find itself in an even worse financial position than present. Ironically, it would be the same bleak financial situation that many hope the 2026 games will save Calgary from.
+
+[caption id="attachment_669" align="aligncenter" width="1024"]<img class="size-large wp-image-669" src="http://35.182.253.99/wp-content/uploads/estimated-vs-final-olympic-costs-1024x576.png" alt="Bar chart showing estimated and final costs of Olympic games since 2000" width="1024" height="576" /> The final costs of every Olympic games since 2000 has exceeded budget - source: Council on Foreign Relations via CNBC[/caption]
+
+As much as Councillor Carra and his peers desire the Olympic Games to provide a financial boost to Calgary, the evidence suggests otherwise. Although the International Olympic Committee indicated that <a href="https://globalnews.ca/news/3981850/ioc-likes-calgarys-legacy-including-saddledome-for-2026-bid-city-director/">many of Calgary's existing event facilities are acceptable</a>, thus reducing the total cost required for Calgary to host the games, a strong likelihood remains that after the games wrap up, the city will at best only recover its costs. If Calgary is fortunate enough to generate a profit, it will be immaterial compared to the $9 billion annual city budget, and provides no recurring source of revenue.
+
+It is time for city council to move on to more serious matters that affect the daily lives of Calgarians. Council should be addressing the challenges Calgarians are facing today. The 2026 Olympics will not fill <a href="https://globalnews.ca/news/4054474/has-calgarys-downtown-office-vacancy-rate-finally-hit-bottom-experts-say-maybe/">Calgary's staggering 27% office vacancy</a>. It will not address the <a href="http://www.cbc.ca/news/canada/calgary/calgary-municipal-tax-hike-2018-1.4427571">2018 budget gap which resulted in $28 million in cuts for programs and the loss of 150 jobs</a>. These are the issues that city council should be devoting their time and citizen tax dollars towards. Further spending on Olympic pursuits does nothing to resolve these issues and only threatens to incur more debt, threatening Calgary's future financial situation.
