@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Plagiarism
 category: academia
 ---
