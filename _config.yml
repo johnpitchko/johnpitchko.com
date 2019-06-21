@@ -49,6 +49,13 @@ defaults:
       share: true
       related: false
       author_profile: true
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 
 
@@ -94,9 +101,9 @@ author:
 
 # Collections
 collections:
-  books2:
+  books:
     output: true
-    permalink: /:collection/:name.html
+    permalink: /:collection/:path
   renovations:
     output: true
     permalink: /:collection/:name.html
