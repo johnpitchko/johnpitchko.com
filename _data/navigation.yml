@@ -11,8 +11,8 @@ main:
     url: /projects
     # identifier: projects
 
-  - title: Resume
-    url: /resume
+  # - title: Resume
+    # url: /resume
     # identifier: resume
 
   - title: Book Summaries
