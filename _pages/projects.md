@@ -15,17 +15,13 @@ This program came about as an experiment to determine if customers were willing 
 
 A six-week applied program guiding participants through the early phases of the Customer Development Lifecycle. Participants were guided through mapping their startup ideas onto a Business Model Canvas, then tasked with interviewing their target customers to confirm their assumptions. Results were analyzed in a group setting to identify trends and new insights. At the end of the course, participants presented their findings to a group of serial entrepreneurs to gather their perspective.
 
-I authored the workshops, which I then delivered to more than 80 customers. These fledgling entrepreneurs conducted more than 200 customer interviews.
+I authored and delivered the workshops 80 early-stage entrepreneurs, whom conducted more than 200 customer interviews during the program.
 
 ### <i class="fa fa-globe"></i>&nbsp;&nbsp;Validate
 
 This program instructs founders on how to build and validate a Minimum Viable Product with customers as quickly and inexpensively as possible.
 
-#### 17
-##### Startups
-
-#### 103
-##### Customers Interviewed
+I designed this course as a follow-on to Discover, so our entrepreneur clients who completed their customer discovery work has a program to show them how to conduct rapid prototyping and testing.
 
 ## Innovation/Startup Support Services
 
