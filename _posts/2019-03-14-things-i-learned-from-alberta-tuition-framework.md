@@ -1,5 +1,6 @@
 ---
 title: Eight things I learned about the Alberta Tuition Framework
+categories: [Academic]
 ---
 
 In February 2019, the [Government of Alberta](https://www.alberta.ca/index.aspx) released an updated copy of the [Alberta Tuition Framework](https://open.alberta.ca/publications/9781460143155). The document specifies the policies around tuition and fees that students must pay to attend post-secondary institutions in Alberta. It also describes the procedures for adjusting tuition.

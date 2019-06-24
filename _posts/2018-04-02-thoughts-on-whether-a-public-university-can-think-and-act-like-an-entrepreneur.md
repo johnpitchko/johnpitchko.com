@@ -3,12 +3,11 @@ id: 654
 title: Thoughts on whether a public university can think and act like an entrepreneur
 date: 2018-04-02T15:37:10+00:00
 author: John Pitchko
-
-guid: http://35.182.253.99/?p=654
 permalink: /thoughts-on-whether-a-public-university-can-think-and-act-like-an-entrepreneur/
 image: /wp-content/uploads/5902353551_19576d0eda_b-740x430.jpg
 categories:
   - Startups
+  - Academic
 ---
 <a href="http://www.ucalgary.ca/president/about">Dr. Elizabeth Cannon</a>, president of the <a href="https://www.ucalgary.ca/">University of Calgary</a>, participated in a <a href="https://event.on24.com/eventRegistration/console/EventConsoleApollo.jsp?&amp;eventid=1587198&amp;sessionid=1&amp;username=&amp;partnerref=&amp;format=fhvideo1&amp;mobile=false&amp;flashsupportedmobiledevice=false&amp;helpcenter=false&amp;key=875ED6BF092BD666276C935301804CEE&amp;text_language_id=en&amp;playerwidth=1000&amp;playerheight=650&amp;overwritelobby=y&amp;eventuserid=195486394&amp;contenttype=A&amp;mediametricsessionid=162352480&amp;mediametricid=2274979&amp;usercd=195486394&amp;mode=launch">webinar on Friday, March 23 on the topic of whether a public university can think and act like an entrepreneur</a>. Dr. Cannon presented her thoughts on how a university can act in an entrepreneurial manner, and how prestigious institutions like the <a href="https://uwaterloo.ca/">University of Waterloo</a> and <a href="https://www.technion.ac.il/en/home-2/">Technion</a> in Israel demonstrate innovative thinking in academic institutions. She then presented the changes she lead at the university towards the vision of the university embracing the entrepreneurial mindset, and additional work required to realize her vision.
 
