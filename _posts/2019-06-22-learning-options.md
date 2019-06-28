@@ -10,11 +10,13 @@ Apple's next earnings call is July 30, so I will choose an expiration date of Au
 
 Commissions for trading options are important to note. Fees for options are generally higher than ones for equities, so it is important to track their impact on the overall success of a trade. Commissions on small volume/low value options can very quickly erode profit. I mentioned earlier that I use Questrade, who [charges $9.95 per trade plus $1 per contract](https://www.questrade.com/pricing/self-directed-commissions-plans-fees). Other brokerage firms may offer reduced fees resulting in less impact on the profit of a trade.
 
-|Strike|Price|Implied Volatility|Delta|Plus Commission
-|-----:|----:|-----------------:|----:|---:|
-|192.50|11.99|32.67%|0.6633|22.94
-|197.50|8.44|29.60%|0.5487|19.39
-|202.50|6.00|29.00%|0.4328|16.95
+|Strike|Price|Implied Volatility|Delta|Trade Value[^1]|Plus Commission|
+|-----:|----:|-----------------:|----:|-----------------------:|--------------:|
+|192.50|11.99|32.67%|0.6633|1,199.00|1209.95
+|197.50|8.44|29.60%|0.5487|844.00|854.95
+|202.50|6.00|29.00%|0.4328|600.00|610.95
+
+[^1]:One contract (100 shares)
 
 # The Wheel
 
