@@ -4,12 +4,12 @@ title: Enable logging in WordPress and PHP for Apache on Debian/Ubuntu
 date: 2018-03-23T10:48:52+00:00
 author: John Pitchko
 
-guid: http://35.182.253.99/?p=630
+guid: https://35.182.253.99/?p=630
 permalink: /enable-logging-in-wordpress-and-php-for-apache-on-debian-ubuntu/
 categories:
   - Software Development
 ---
-I was working on my custom theme for this blog and was running into an issue involving the [Jetpack](https://jetpack.com) plugin for Wordpress. After spending a couple of hours tinkering around, I determined that the cause _appears_ to be related to [Scotch Box](https://box.scotch.io) (no issues when executing the same steps using [VCCW](http://vccw.cc)).
+I was working on my custom theme for this blog and was running into an issue involving the [Jetpack](https://jetpack.com) plugin for Wordpress. After spending a couple of hours tinkering around, I determined that the cause _appears_ to be related to [Scotch Box](https://box.scotch.io) (no issues when executing the same steps using [VCCW](https://vccw.cc)).
 
 I opened an [issue with the Scotch Box repo](https://github.com/scotch-io/scotch-box/issues/373) and am gathering log data from both Wordpress and PHP. After struggling to find detailed instructions for how to enable and access error logs for both Wordpress and PHP, I wrote the below to help future me and others who are also struggling.
 
@@ -30,7 +30,7 @@ If you are debugging Jetpack on a localhost, add this line to disable modules th
 
 ## Enable Logging in PHP
 
-Reference: [PHP: error_reporting](http://php.net/manual/en/function.error-reporting.php)
+Reference: [PHP: error_reporting](https://php.net/manual/en/function.error-reporting.php)
 
 The first step is to determine the location of the PHP binary your install of Apache is using. The simplest way to do this is to create a file and placing it in the root of your web hosting directory (e.g. /var/www). This file should contain:
 
@@ -38,9 +38,9 @@ The first step is to determine the location of the PHP binary your install of Ap
 <?php echo phpinfo(); ?>
 ```
 
-Navigate to that URL (**http://localhost/phpinfo.php**) in your browser. You will see the a list of configuration values for the PHP instance that Apache is using.
+Navigate to that URL (**https://localhost/phpinfo.php**) in your browser. You will see the a list of configuration values for the PHP instance that Apache is using.
 
-[caption id="attachment_635" align="aligncenter" width="984"]<img class="size-full wp-image-635" src="http://35.182.253.99/wp-content/uploads/phpinfo.png" alt="PHP information for Apache" width="984" height="595" /> PHP information for Apache[/caption]
+[caption id="attachment_635" align="aligncenter" width="984"]<img class="size-full wp-image-635" src="https://35.182.253.99/wp-content/uploads/phpinfo.png" alt="PHP information for Apache" width="984" height="595" /> PHP information for Apache[/caption]
 
 Look for the line **Configuration File (php.ini) Path**. This is the file that must be modified to include the logging options. Most of the configuration fields are already specified in this file, so their values just need to be modified.
 
