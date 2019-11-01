@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Wealthsimple vs Questrade XGRO"
 permalink: "/wealthsimple-vs-questrade-xgro/"
 ---
