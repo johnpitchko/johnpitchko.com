@@ -1,7 +1,9 @@
 
 # johnpitchko.com Website
 
-Personal blog built with [Bootstrap](http://getbootstrap.com/), powered by [Jekyll](http://jekyllrb.com/) and [Sustain4](https://johnpitchko.github.io/sustain4), and hosted at [johnpitchko.com](https://www.johnpitchko.com).
+Personal blog powered by [Jekyll](http://jekyllrb.com/), styled by the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme, and hosted at [Netlify](https://www.netlify.com).
+
+The site is available as [www.johnpitchko.com](https://www.johnpitchko.com).
 
 ## Build
 
@@ -9,9 +11,7 @@ Run `bundle exec jekyll serve`
 
 ## Deploy
 
-The __deploy.sh__ script uses rsync to deploy the code to my personal webhost using SSH and a private key.
-
-Edit __deploy.sh__ to your liking (change the hostname and username) and execute.
+The site is hosted for free on [Netlify](https://www.netlify.com). Deployments are automatically performed when the content is pushed to [Github](https://www.github.com).
 
 ## Copyright & License
 

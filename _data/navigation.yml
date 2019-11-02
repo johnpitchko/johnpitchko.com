@@ -1,0 +1,20 @@
+main:
+  # - title: About Me
+  #   url: /about-me
+  #   # identifier: about-me
+  #
+  # - title: Blog
+  #   url: /blog
+  #   # identifier: blog
+  #
+  # - title: Projects
+  #   url: /projects
+  #   # identifier: projects
+
+  - title: Resume
+    url: /resume
+    identifier: resume
+
+  # - title: Book Summaries
+  #   url: /books
+  #   # identifier: books

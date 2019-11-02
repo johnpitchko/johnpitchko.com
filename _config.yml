@@ -10,7 +10,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -18,12 +18,12 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-CA"
 title                    : "John Pitchko"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Associate Dean, SAIT Polytechnic" # site tagline that appears below site title in masthead
 name                     : "John Pitchko"
 description              : "Resume"
 url                      : "https://www.johnpitchko.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : johnpitchko/johnpitchko.com # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "johnpitchko/johnpitchko.com" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -98,6 +98,7 @@ social:
   links: # An array of links to social media profiles
     - "https://twitter.com/johnpitchko"
     - "https://instagram.com/johnpitchko"
+    - "https://www.linkedin.com/in/johnpitchko/"
 
 # Analytics
 analytics:
@@ -110,7 +111,7 @@ analytics:
 # Site Author
 author:
   name             : "John Pitchko"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/john-pitchko-400x400.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Associate Dean, SAIT Polytechnic"
   location         : "Calgary, AB, Canada"
   email            :
@@ -133,13 +134,16 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/johnpitchko"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johnpitchko/"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/johnpitchko"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
@@ -148,14 +152,16 @@ footer:
       # url:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url:
+      url: "https://github.com/johnpitchko"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
-
+      url: "https://instagram.com/johnpitchko"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johnpitchko/"
 
 # Reading Files
 include:
@@ -294,3 +300,10 @@ defaults:
       comments: # true
       share: true
       related: true
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
