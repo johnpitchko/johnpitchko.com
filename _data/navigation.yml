@@ -3,9 +3,9 @@ main:
   #   url: /about-me
   #   # identifier: about-me
   #
-  # - title: Blog
-  #   url: /blog
-  #   # identifier: blog
+  - title: Blog
+    url: /blog
+    # identifier: blog
   #
   # - title: Projects
   #   url: /projects
