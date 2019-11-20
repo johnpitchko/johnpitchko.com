@@ -18,6 +18,4 @@ fields:
     required: false
   label: categories
 pages:
-- _posts/2019-07-08-week-7-curriculum-development-and-student-surveys.md
-- _posts/x-tips-on-coaching.md
-- _posts/Test.md
+- trades.md

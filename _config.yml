@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-CA"
 title                    : "John Pitchko"
 title_separator          : "-"
-subtitle                 : "Associate Dean, SAIT Polytechnic" # site tagline that appears below site title in masthead
+subtitle                 : "Associate Dean @ SAIT Polytechnic, Part-time Options Trader" # site tagline that appears below site title in masthead
 name                     : "John Pitchko"
 description              : "Resume"
 url                      : "https://www.johnpitchko.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -112,7 +112,7 @@ analytics:
 author:
   name             : "John Pitchko"
   avatar           : "/assets/images/john-pitchko-400x400.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Associate Dean, SAIT Polytechnic"
+  bio              : "Associate Dean @ SAIT Polytechnic, Part-time Options Trader"
   location         : "Calgary, AB, Canada"
   email            :
   links:
