@@ -1,8 +1,6 @@
 ---
-layout: post
 title: 'DD: Costco Q1 2020 Earnings'
 categories: ''
-
 ---
 Here is some quick (first time posting) [DD](https://www.reddit.com/r/wallstreetbets/comments/6j6gri/the_art_of_the_dd_for_beginners/) on the upcoming [Costco](https://www.costco.ca) $COST earnings. Q1 2020 earnings will be reported on December 12.
 
