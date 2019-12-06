@@ -12,6 +12,7 @@ Here is some quick (first time posting) [DD](https://www.reddit.com/r/wallstreet
 * US consumer confidence is up, close to two year high ([Trading Economics](https://tradingeconomics.com/united-states/consumer-confidence))
 * Costco reported over 6% growth in net sales for November YoY, and 5.6% growth in sales over the quarter. YoY sales for September and October also grew by between 5 and 6 percent.
 * Retail sales from many retail stores ($BBUY, $TGT) over US Thanksgiving/Black Friday/Cyber Monday period broke sales records ([MarketWatch](https://www.marketwatch.com/story/target-best-buy-and-lululemon-were-thanksgiving-weekend-retail-winners-analysts-say-2019-12-02?mod=mw_quote_news)), but technical issues on Costco's website reduced online sales for the company during this period.
+* P/E (35.8) trades high against comparables ($WMT: 26.85, $TGT 19.91)
 
 **Conclusion: bullish**
 
