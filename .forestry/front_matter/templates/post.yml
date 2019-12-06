@@ -18,4 +18,6 @@ fields:
     required: false
   label: categories
 pages:
+- _posts/dd-costco-q1-2020-earnings.md
+- trades.md
 - trades.md
