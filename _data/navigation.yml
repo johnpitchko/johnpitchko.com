@@ -6,6 +6,10 @@ main:
   - title: Blog
     url: /blog
     # identifier: blog
+
+  - title: Trades
+    url: /trades
+
   #
   # - title: Projects
   #   url: /projects

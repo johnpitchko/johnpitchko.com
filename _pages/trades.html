@@ -1,0 +1,40 @@
+---
+title: Trades
+permalink: trades
+classes: wide
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.4.3/css/bootstrap/tabulator_bootstrap.min.css" integrity="sha256-gbLZq5iW9w6RdgFpkPqLB6tqKUB9tKwGUT3qXoJqPvU=" crossorigin="anonymous" /> -->
+<link href="https://unpkg.com/tabulator-tables@4.5.2/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.2/dist/js/tabulator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+<p>My history of options trading. All currency in USD.</p>
+
+
+<div id="trades"></div>
+
+<p>Powered by <a href="http://tabulator.info/">Tabulator</a>, <a href="https://jquery.com">jQuery</a>, and <a href="https://momentjs.com">MomentJS</a>.
+
+
+<script>
+  $(document).ready( function() {
+    var table = new Tabulator("#trades", {
+      ajaxURL:"assets/trades.json", //ajax URL
+      columns: [
+        { title: "Open Date", field: "Open Date", formatter: "datetime", formatterParams: { inputFormat: "DD MMM YYYY", outputFormat: "MM/DD", invalidPlaceholder: "true" } },
+        { title: "Symbol", field: "Symbol" },
+        { title: "Strategy", field: "Strategy" },
+        { title: "Strikes", field: "Strikes" },
+        { title: "Expiration", field: "Expiration", align: "right", formatter: "datetime", formatterParams: { inputFormat: "DD MMM YYYY", outputFormat: "MM/DD/YY", invalidPlaceholder: "true" } },
+        { title: "Quantity", field: "Quantity", align: "right" },
+        { title: "Open", field: "Open", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
+        { title: "Close", field: "Close", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
+        { title: "Gross P/L", field: "Gross P-L (USD)", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" },
+            bottomCalc: "sum", bottomCalcFormatter: "money", bottomCalcFormatterParams: { decimal: ".", thousand: ",", symbol: "$" }
+        } ]
+    });
+  });
+</script>
