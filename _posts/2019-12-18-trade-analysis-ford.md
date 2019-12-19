@@ -1,3 +1,7 @@
+---
+title: Trade Analysis: $F (Ford)
+---
+
 Bought $F (Ford) several months ago because it was a cheap stock with an active options market - an ideal underlying for dipping my toe in low-risk options trading through selling covered calls. When I was starting my options trading journey, this was the scenario that I was looking for.
 
 I had a few other reasons for going long on $F. I heard a podcast from the current CEO of Ford who shared his vision of transforming the company from an internal-combustion automobile manufacturer to a broader transportation company. A bold vision. Another equally bold move that I liked from the new CEO was their elimination of underperforming automobile models (in fact, exiting that market completely) to focus on their strengths - trucks and SUVs. Clearly, this CEO is not messing around. Something else I liked about $F was its solid dividend - $0.15 - equating to a 6.5% yield that outperforms many other stocks. For 300 shares, annual dividend payments are forecast to be $180/year.
