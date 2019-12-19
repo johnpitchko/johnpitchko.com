@@ -17,3 +17,5 @@ Currency can also be converted through the Trader Workstation application and th
 8. In a moment, you should see your trade be fulfilled, meaning that you sold Canadian dollars and purchased US dollars.  To confirm the order status, access your Orders & Trades screen. Your filled order will be listed under Trades.
 
 Unfortunately, IBKR does not immediately reflect your changed cash position in your portfolio. It may take between a few minutes and an hour to see the US dollar cash appear in your account.
+
+| 2019-09-03 | Dividend payment                                         |                   $0.15 | 
