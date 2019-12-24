@@ -82,6 +82,11 @@ bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
+head_scripts:
+  - https://identity.netlify.com/v1/netlify-identity-widget.js
+footer_scripts:
+  - /assets/js/netlify-identity-redirect.js
+
 # Social Sharing
 twitter:
   username               : "johnpitchko"

@@ -1,0 +1,21 @@
+# Netlify CMS configuration
+# See https://www.netlifycms.org/docs/add-to-your-site/ for details
+
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optiona; defaults to master)
+
+# Uncomment to enable Editorial Workflow (drafting, reviewing, approving)
+# publish_mode: editorial_workflow
+
+media_folder: "assets/images/uploads" # Media files will be stored in the repo under assets/images/uploads
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
