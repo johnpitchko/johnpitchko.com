@@ -29,12 +29,13 @@ classes: wide
         { title: "Strategy", field: "Strategy" },
         { title: "Strikes", field: "Strikes" },
         { title: "Expiration", field: "Expiration", align: "right", formatter: "datetime", formatterParams: { inputFormat: "DD MMM YYYY", outputFormat: "MM/DD/YY", invalidPlaceholder: "true" } },
-        { title: "Quantity", field: "Quantity", align: "right" },
-        { title: "Open", field: "Open", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
-        { title: "Close", field: "Close", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
-        { title: "Gross P/L", field: "Gross P-L (USD)", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" },
+        { title: "Quantity", field: "Open Quantity", align: "right" },
+        { title: "Open", field: "Open Value", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
+        { title: "Close", field: "Close Value", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
+        { title: "Gross PnL", field: "Gross PnL (USD)", align: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" },
             bottomCalc: "sum", bottomCalcFormatter: "money", bottomCalcFormatterParams: { decimal: ".", thousand: ",", symbol: "$" }
-        } ]
+        }
+      ]
     });
   });
 </script>
