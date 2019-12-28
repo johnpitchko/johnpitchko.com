@@ -1,0 +1,85 @@
+---
+title: ETF Correlation
+classes: wide
+---
+
+<p><a href="https://www.tastytrade.com/tt/shows/tasty-bites/episodes/uncorrelated-trading-06-01-2016">Tastytrade recommends traders look to diversify their positions by trading non-correlated underlyings.</a></p> The benefit is that if one position moves against you, the other positions should not be significantly impacted.</p>
+
+<p>Below is a table showing correlations between some of the highest volume ETFs (which also means they have a very active options market).</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<link href="https://unpkg.com/tabulator-tables@4.5.2/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.2/dist/js/tabulator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+<div id="etf-correlation"></div>
+
+<script>
+  $(document).ready( function() {
+    var table = new Tabulator("#etf-correlation", {
+      ajaxURL: "/assets/etf-correlation.json", //ajax URL
+      layout: "fitDataFill",
+      columns: [
+        { title: "ETF", field: "ETF" },
+        { title: "DIA", field: "DIA", align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "EEM", field: "EEM" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "EFA", field: "EFA" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "EWZ", field: "EWZ" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "FXI", field: "FXI" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "GDX", field: "GDX" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "GLD", field: "GLD" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "HYG", field: "HYG" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "IAU", field: "IAU" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "IWM", field: "IWM" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "QQQ", field: "QQQ" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "SLV", field: "SLV" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "SPY", field: "SPY" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "TBT", field: "TBT" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "TLT", field: "TLT" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "UNG", field: "UNG" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+        { title: "USO", field: "USO" , align: "right", formatter: "money", formatterParams: {
+          decimal: "."
+        } },
+      ],
+    });
+  });
+</script>
+
+<p>Short term (6 month) correlations as of Dec 20, 2019.</p>
+
+<p>Data courtesy of : https://www.etfscreen.com/correlation.php</p>
+
+<p>Table powered by <a href="http://tabulator.info/">Tabulator</a>.
