@@ -10,15 +10,20 @@ By December 16, the remaining short put exceeded 90% profit, so I rolled it up a
 
 Here is my current standing on FXI:
 
-| Date   | Action                               |      Price | Quantity | Gross Debit/Credit |    Fees | Net Debit/Credit |
-| ------ | ------------------------------------ | ----------:| --------:| ------------------:| -------:| ----------------:|
-| Nov 22 | Open Jan-17 41 short straddle on FXI |      $2.24 |       -1 |            $224.00 | -$11.95 |          $212.05 |
-| Dec 16 | Assign 41 short call                 |     $41.00 |     -100 |          $4,100.00 | -$25.04 |        $4,074.96 |
-| Dec 26 | Open Jan-17/Mar-20 41p/42p diagonal  |      $0.67 |       -1 |             $67.00 | -$11.95 |           $55.05 |
-|        |                                      | **-43.91** |          |                    |         |    **$4,342.06** |
+| Date   | Action                               |  Price | Quantity | Gross Debit/Credit |    Fees | Net Debit/Credit |
+| ------ | ------------------------------------ | ------:| --------:| ------------------:| -------:| ----------------:|
+| Nov 22 | Open Jan-17 41 short straddle on FXI |  $2.24 |       -1 |            $224.00 | -$11.95 |          $212.05 |
+| Dec 16 | Assign 41 short call                 | $41.00 |     -100 |          $4,100.00 | -$25.04 |        $4,074.96 |
+| Dec 26 | Open Jan-17/Mar-20 41p/42p diagonal  |  $0.67 |       -1 |             $67.00 | -$11.95 |           $55.05 |
+| Jan 21 | Buy to close short FXI               | $43.05 |      100 |         -$4,305.00 |   $0.00 |       -$4,305.00 |
+|        |                                      |        |          |         **$86.00** |         |       **$37.06** |
 
 Assuming my math is correct, then I can still profit off FXI *if*:
 1. My Mar-20 42p expires worthless;
 2. I can purchase FXI at <$43.91 ($43.42) to close my short position.
 
 As of the time of this writing (Jan 14), FXI closed at $44.82, so I am unlikely to be buying shares at breakeven price in the short term.
+
+**Update (2020-Jan-23)**: FXI fell below $43 due to the [outbreak of coronavirus](https://www.cbc.ca/news/china-coronavirus-wuhan-public-health-1.5437217). As a result of the price decline, I was fortunate to buy my outstanding 100 shares of FXI for $43.05. I possibly could have held out longer to see about buying the shares for less to increase my profit, however I did not want to push my luck and risk the shares rebounding.
+
+As of the moment, with the short 42p still open, I am showing a net profit of $37. If the coronavirus spreads further and causes more havoc, the share price may fall further, moving that short put to be in-the-money. However I still have about six weeks to expiration, so a fair bit of time for FXI to recover.
