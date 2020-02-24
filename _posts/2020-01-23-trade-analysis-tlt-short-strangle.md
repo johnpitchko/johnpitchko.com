@@ -13,4 +13,4 @@ It was a rocky road between TLT rising steadily since that time and coronavirus 
 | Jan 31 | Close position                                | $3.35 |        3 |         -$1,005.00 | $15.95 |       -$1,020.95 |
 |        |                                               |       |          |       **-$534.00** |        |     **-$481.86** |
 
-The outcome and lessons learned from this play is the same as for my [recent GLD short strangle]({% link _posts/2020-01-06-trade-analysis-gld-strangle-inversion.md %}). Too much undefined risk in tightly correlated underlyings. A black swan event (coronavirus) had major impact on both positions.
+The outcome and lessons learned from this play is the same as for my [recent GLD short strangle]({% link _posts/2020-01-06-trade-analysis-gld-strangle.md %}). Too much undefined risk in tightly correlated underlyings. A black swan event (coronavirus) had major impact on both positions.
