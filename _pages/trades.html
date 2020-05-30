@@ -14,6 +14,9 @@ classes: wide
 
 <p>My history of options trading. All currency in USD.</p>
 
+<p>The trades below are not individual trades. Rather they are strategies consisting of multiple trades over a period of time. In many cases, trades were rolled several times in order to extend time to achieve profit. As I develop and refine this page more, there may be a way to show the individual trades.</p>
+
+<p>The total row of the <strong>Profit/loss (%)</strong> column shows the average profit/loss of all the trades.</p>
 
 <div id="trades"></div>
 
@@ -35,9 +38,13 @@ classes: wide
         { title: "Open", field: "Open gross", hozAlign: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
         { title: "Close date", field: "Close date", hozAlign: "right", formatter: "datetime", formatterParams: { inputFormat: "MM/DD/YYYY", outputFormat: "YYYY-MM-DD", invalidPlaceholder: "" } },
         { title: "Close", field: "Close gross", hozAlign: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
-        { title: "Gross PnL ($)", field: "Gross PnL", hozAlign: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" },
+        { title: "Profit/loss ($)", field: "Gross PnL", hozAlign: "right", formatter: "money", formatterParams: { decimal: ".", thousand: ",", symbol: "$" },
             bottomCalc: "sum", bottomCalcFormatter: "money", bottomCalcFormatterParams: { decimal: ".", thousand: ",", symbol: "$" } },
-        { title: "Gross PnL (%)", field: "Gross PnL %", hozAlign: "right" }
+        { title: "Profit/loss (%)", field: "Gross PnL %", hozAlign: "right", formatter: function(cell, formatterParams, onRendered) {
+            // Data is stored as a multiple digit decimal. The code below formats it for display as an integer with a percent sign.
+            return Math.trunc(cell.getValue() * 100).toString().concat('%');
+          }, bottomCalc: "avg", bottomCalcFormatter: function(cell, formatterParams, onRendered) { return Math.trunc(cell.getValue() * 100).toString().concat('%'); }
+        }
       ]
     });
   });
