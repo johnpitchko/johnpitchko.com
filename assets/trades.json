@@ -97,7 +97,7 @@
     "Open gross": -5139.79,
     "Close gross": 5518,
     "Gross PnL": 378.21,
-    "Gross PnL %": -0.07358471844180405
+    "Gross PnL %": 0.07358471844180405
   },
   {
     "Symbol": "QQQ",
@@ -127,7 +127,7 @@
     "Open gross": -75,
     "Close gross": 100,
     "Gross PnL": 25,
-    "Gross PnL %": -0.3333333333333333
+    "Gross PnL %": 0.3333333333333333
   },
   {
     "Symbol": "TLT",
@@ -147,7 +147,7 @@
     "Open gross": -303,
     "Close gross": 285,
     "Gross PnL": -18,
-    "Gross PnL %": 0.0594059405940594
+    "Gross PnL %": -0.0594059405940594
   },
   {
     "Symbol": "COST",
@@ -197,7 +197,7 @@
     "Open gross": -194,
     "Close gross": 330,
     "Gross PnL": 136,
-    "Gross PnL %": -0.7010309278350515
+    "Gross PnL %": 0.7010309278350515
   },
   {
     "Symbol": "TLT",
@@ -217,7 +217,7 @@
     "Open gross": -859,
     "Close gross": 1289,
     "Gross PnL": 430,
-    "Gross PnL %": -0.5005820721769499
+    "Gross PnL %": 0.5005820721769499
   },
   {
     "Symbol": "TLT",
@@ -297,6 +297,6 @@
     "Open gross": -1540,
     "Close gross": 1650,
     "Gross PnL": 110,
-    "Gross PnL %": -0.07142857142857142
+    "Gross PnL %": 0.07142857142857142
   }
 ]
