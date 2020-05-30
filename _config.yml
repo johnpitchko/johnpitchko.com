@@ -155,8 +155,8 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
       url: "https://github.com/johnpitchko"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
