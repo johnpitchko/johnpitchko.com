@@ -5,30 +5,30 @@ permalink: "/resume/"
 ---
 
 ## Career Profile
-Seasoned leader with experience in the information technology, innovation, and higher education sectors. I use entrepreneurial thinking and a "culture eats strategy" approach to advance organizations from good to great.
+Seasoned leader with experience in the information technology, innovation, and higher education sectors. I use entrepreneurial thinking and [Customer Development](https://www.youtube.com/watch?v=xr2zFXblSRM) methodology to advance organizations from good to great.
 
 ## Education:
 ### Master of Business Administration (MBA)
-University of Calgary\\
+[University of Calgary](https://www.ucalgary.ca) - Haskayne School of Business\\
 2010 - 2013\\
 Concentration in Entrepreneurship and Innovation
 
 ### Bachelor of Science (BSc) in Computer Science
-University of Regina\\
+[University of Regina](https://www.uregina.ca)\\
 2000 - 2005\\
 Graduated with Distinction\\
 Co-operative Education Program
 
 ### Certificate in Economics
-University of Regina\\
+[University of Regina](https://www.uregina.ca)\\
 2000 - 2005
 
 ## Work Experience
 ### Associate Dean
 2018 - Present\\
-SAIT Polytechnic, Calgary, Alberta
+[SAIT Polytechnic](https://www.sait.ca), Calgary, Alberta
 
-Leading a team of 6 Academic Chairs and over 100 instructors to deliver two-year diploma programs in technology and media disciplines.
+Leading a team of 6 Academic Chairs and over 200 instructors to deliver accredited diploma and post-diploma programs in information technology and media disciplines.
 
   - Increased diploma admissions by 288 students.
   - Launched a January intake, running classes year-round.
@@ -37,7 +37,7 @@ Leading a team of 6 Academic Chairs and over 100 instructors to deliver two-year
 
 ### Advisor
 2014 - 2018\\
-Platform Calgary, Calgary, Alberta
+[Platform Calgary](https://www.platformcalgary.com), Calgary, Alberta
 
 Advice and educate early and mid-phase entrepreneurs launching technology-enabled, high-growth ventures in the Calgary area. Consulted and educated over 52 clients in various industries, such as health tech, cybersecurity, and multi-sided marketplaces.
 
@@ -49,7 +49,7 @@ Advice and educate early and mid-phase entrepreneurs launching technology-enable
 
 ### Senior IT Project Manager
 2010 - 2016\\
-Shell Canada Ltd, Calgary, Alberta
+[Shell Canada Ltd](https://www.shell.ca), Calgary, Alberta
 
 Managed projects to demonstrate and evaluate innovative cloud and mobile software. Led global development teams to build custom mobile apps to streamline industrial operations by providing workers access to data and work processes while in the field.
 
@@ -60,7 +60,7 @@ Managed projects to demonstrate and evaluate innovative cloud and mobile softwar
 
 ### IT Project Manager
 2005 - 2010\\
-Shell Canada Ltd, Calgary, Alberta
+[Shell Canada Ltd](https://www.shell.ca), Calgary, Alberta
 
 Managed IT project delivery for Shell’s retail and oil sands businesses. Implemented systems to improve reliability of business systems serving nearly 1,000 retail fuel stations. Led a two-year $2.0m program to improve safety, security, and environmental compliance at the Albian Oil Sands mines.
 
@@ -72,10 +72,10 @@ Managed IT project delivery for Shell’s retail and oil sands businesses. Imple
 
 ## Publications
 
-#### "Mobile Plan: How to prepare for an enterprise mobile app project"
+#### ["Mobile Plan: How to prepare for an enterprise mobile app project"](https://www.pmi.org/learning/library/mobile-plan-9594)
 John Pitchko\\
 PMI Network (29:7), 2015
 
-#### "Huddle Up: Tailor stand-up meetings to clear communications hurdles between program and project managers"
+#### ["Huddle Up: Tailor stand-up meetings to clear communications hurdles between program and project managers"](https://www.pmi.org/learning/library/communication-hurtles-between-program-project-managers-4227)
 John Pitchko\\
 PMI network (28:2), 2014
