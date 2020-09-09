@@ -7,13 +7,13 @@ main:
     url: /blog
     # identifier: blog
 
-  - title: Trades
-    url: /trades
+  # - title: Trades
+    # url: /trades
 
-  #
-  # - title: Projects
-  #   url: /projects
-  #   # identifier: projects
+
+  - title: One-line Book Summaries
+    url: /one-line-book-summaries
+    # identifier: projects
 
   - title: Resume
     url: /resume
