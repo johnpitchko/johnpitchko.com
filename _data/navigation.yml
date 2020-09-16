@@ -7,8 +7,8 @@ main:
     url: /blog
     # identifier: blog
 
-  # - title: Trades
-    # url: /trades
+  - title: Trading
+    url: /trading
 
 
   - title: One-line Book Summaries
