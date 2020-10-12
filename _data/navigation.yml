@@ -11,8 +11,8 @@ main:
     url: /trading
 
 
-  - title: One-line Book Summaries
-    url: /one-line-book-summaries
+  # - title: One-line Book Summaries
+    # url: /one-line-book-summaries
     # identifier: projects
 
   - title: Resume
