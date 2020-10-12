@@ -4,46 +4,68 @@ permalink: /trading/
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
-<p>My option trading performance. The goal is to 'beat the market', that is to outperform the SPY ETF. State Street Global Advisors administers the <a href='https://www.ssga.com/us/en/individual/etfs/funds/spdr-sp-500-etf-trust-spy'>SPDR S&P 500 ETF</a> (ticker SPY), which tracks the S&P 500 index of the 500 choice companies trading in the USA.</p>
+<p>My option trading performance. The goal is to 'beat the market', that is to outperform the SPY ETF. State Street Global Advisors administers the <a href='https://www.ssga.com/us/en/individual/etfs/funds/spdr-sp-500-etf-trust-spy'>SPDR S&P 500
+    ETF</a> (ticker SPY), which tracks the S&P 500 index of the 500 choice companies trading in the USA.</p>
 
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a>. SPY performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" width="400" height="400"></canvas>
 
 <script>
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['Jan \'20', 'Feb \'20', 'Mar \'20', 'Apr \'20', 'May \'20', 'Jun \'20', 'Jul \'20', 'Aug \'20'],
-      datasets: [{
-        label: 'My portfolio return (%)',
-        data: [-4.5, -19.2, -19.1, 21.0, 9.2, 0.3, 3.6, 8.6],
-        fill: false,
-        borderColor: 'rgba(153, 102, 255, 1)',
-        lineTension: 0.3
-      }, {
-        label: 'SPY return (%)',
-        data: [-0.16, -8.41, -12.51, 12.68, 4.53, 1.84, 5.51, 7.01],
-        fill: false,
-        borderColor: 'rgba(255, 206, 86, 1)',
-        lineTension: 0.3
-      }]
-    },
-    options: {
-      title: {
-        text: 'Monthly trading performance, Jan 2020 to present',
-        display: true
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
-});
+  var months = [],
+    portfolio = [],
+    spy = [];
 
+  $.getJSON('/assets/trade-performance.json')
+    .done(function(json) {
+      json.forEach(function(value) {
+        months.push(value['month']);
+        portfolio.push(value['portfolio']);
+        spy.push(value['spy']);
+      });
+
+      loadChart();
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      var err = textStatus + ", " + error;
+      console.log("Request Failed: " + err);
+    });
+
+  function loadChart() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: months,
+        datasets: [{
+          label: 'My portfolio return (%)',
+          data: portfolio,
+          fill: false,
+          borderColor: 'rgba(153, 102, 255, 1)',
+          lineTension: 0.3
+        }, {
+          label: 'SPY return (%)',
+          data: spy,
+          fill: false,
+          borderColor: 'rgba(255, 206, 86, 1)',
+          lineTension: 0.3
+        }]
+      },
+      options: {
+        title: {
+          text: 'Monthly trading performance, Jan 2020 to present',
+          display: true
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
 </script>
