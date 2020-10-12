@@ -84,6 +84,8 @@ naver_site_verification  :
 
 head_scripts:
   - https://identity.netlify.com/v1/netlify-identity-widget.js
+  - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js
 footer_scripts:
   - /assets/js/netlify-identity-redirect.js
 
