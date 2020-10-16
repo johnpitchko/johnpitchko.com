@@ -3,18 +3,20 @@ title: Trading
 permalink: /trading/
 ---
 
-<link href="dist/css/tabulator.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.8.2/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet">
 
 <p>My option trading performance, measured monthly. The goal is to 'beat the market', that is to outperform the S&P 500 index. The S&P 500 is an index that tracks the 500 largest US publicly-traded companies. The index is commonly used as a measure of the overal US stock market.</p>
 
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
+stylesheet
 <canvas id="myChart" width="400" height="400"></canvas>
-<div id="portfolio-table"></div>
+<div id="performance-table" class=""></div>
 
 <script>
-  var trade_data = {{ site.data.trade-performance | jsonify }};
+  var trade_data = {{ site.data.trade-data | jsonify }};
 
+  // Render chart
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'line',
@@ -47,5 +49,23 @@ permalink: /trading/
         }]
       }
     }
+  });
+
+  // Custom Tabulator formatters
+  function percentageFormatter(cell, formatterParams, onRendered) {
+    return cell.getValue() + '%';
+  }
+
+  // Render table
+  var table = new Tabulator("#performance-table", {
+    data: trade_data,
+    layout: 'fitColumns',
+    cellHozAlign: 'right',
+    headerHozAlign: 'right',
+    columns: [
+      { title: 'Month', field: 'month', hozAlign: 'left', headerHozAlign: 'left' },
+      { title: 'Portfolio Return (%)', field: 'portfolio_return', bottomCalc: 'avg', bottomCalcParams: { precision: 1 } },
+      { title: 'SPX Return', field: 'spx_return', formatter: percentageFormatter, bottomCalc: 'avg' }
+    ],
   });
 </script>
