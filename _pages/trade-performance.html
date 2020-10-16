@@ -5,66 +5,47 @@ permalink: /trading/
 
 <link href="dist/css/tabulator.min.css" rel="stylesheet">
 
-<p>My option trading performance. The goal is to 'beat the market', that is to outperform the SPY ETF. State Street Global Advisors administers the <a href='https://www.ssga.com/us/en/individual/etfs/funds/spdr-sp-500-etf-trust-spy'>SPDR S&P 500
-    ETF</a> (ticker SPY), which tracks the S&P 500 index of the 500 choice companies trading in the USA.</p>
+<p>My option trading performance, measured monthly. The goal is to 'beat the market', that is to outperform the S&P 500 index. The S&P 500 is an index that tracks the 500 largest US publicly-traded companies. The index is commonly used as a measure of the overal US stock market.</p>
 
-<p>Powered by <a href="https://www.chartjs.org">ChartJS</a>. SPY performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
+<p>Powered by <a href="https://www.chartjs.org">ChartJS</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" width="400" height="400"></canvas>
+<div id="portfolio-table"></div>
 
 <script>
-  var months = [],
-    portfolio = [],
-    spy = [];
+  var trade_data = {{ site.data.trade-performance | jsonify }};
 
-  $.getJSON('/assets/trade-performance.json')
-    .done(function(json) {
-      json.forEach(function(value) {
-        months.push(value['month']);
-        portfolio.push(value['portfolio']);
-        spy.push(value['spy']);
-      });
-
-      loadChart();
-    })
-    .fail(function(jqxhr, textStatus, error) {
-      var err = textStatus + ", " + error;
-      console.log("Request Failed: " + err);
-    });
-
-  function loadChart() {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: months,
-        datasets: [{
-          label: 'My portfolio return (%)',
-          data: portfolio,
-          fill: false,
-          borderColor: 'rgba(153, 102, 255, 1)',
-          lineTension: 0.3
-        }, {
-          label: 'SPY return (%)',
-          data: spy,
-          fill: false,
-          borderColor: 'rgba(255, 206, 86, 1)',
-          lineTension: 0.3
-        }]
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: trade_data.map(x => x.month),
+      datasets: [{
+        label: 'My portfolio return (%)',
+        data: trade_data.map(x => x.portfolio_return),
+        fill: false,
+        borderColor: 'rgba(153, 102, 255, 1)',
+        lineTension: 0.3
+      }, {
+        label: 'SPX return (%)',
+        data: trade_data.map(x => x.spx_return),
+        fill: false,
+        borderColor: 'rgba(255, 206, 86, 1)',
+        lineTension: 0.3
+      }]
+    },
+    options: {
+      title: {
+        text: 'Monthly trading performance, Jan 2020 to present',
+        display: true
       },
-      options: {
-        title: {
-          text: 'Monthly trading performance, Jan 2020 to present',
-          display: true
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
       }
-    });
-  }
+    }
+  });
 </script>
