@@ -1,0 +1,60 @@
+---
+layout: single
+---
+
+{{ content }}
+
+<h2>Monthly statement</h2>
+
+{% assign report = site.data.monthly-performance | find: "Month", page.month %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">&nbsp;</th>
+      <th scope="col" class="text-right">Current month ($CAD)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opening balance</td>
+      <td class="text-right"><strong>{{ report['Opening balance'] | money_from_amount }}</strong></td>
+    </tr>
+    <tr>
+      <td>Deposits</td>
+      <td class="text-right">{{ report['Deposits'] | money_from_amount }}</td>
+    </tr>
+    <tr>
+      <td>Withdrawals</td>
+      <td class="text-right">{{ report['Withdrawals'] | money_from_amount }}</td>
+    </tr>
+    <tr>
+      <td>Change in balance</td>
+      <td class="text-right">{{ report['Change in balance'] | money_from_amount }}</td>
+    </tr>
+    <tr>
+      <td>Closing balance</td>
+      <td class="text-right"><strong>{{ report['Closing balance'] | money_from_amount }}</strong></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Cumulative portfolio net P/L</td>
+      <td class="text-right">{{ report['Change in balance since open'] | money_from_amount }}</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Portfolio return</td>
+      <td class="text-right">{{ report['Portfolio return'] }}%</td>
+    </tr>
+    <tr>
+      <td>SPY return</td>
+      <td class="text-right">{{ report['SPY return'] }}%</td>
+    </tr>
+  </tbody>
+</table>

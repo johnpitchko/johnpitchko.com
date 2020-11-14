@@ -25,4 +25,6 @@ gem "minimal-mistakes-jekyll"
 #
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
+  # gem 'jekyll-money', "~>0.2"
+  gem 'jekyll-money2', '~>0.2.2'
 end
