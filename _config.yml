@@ -93,7 +93,7 @@ footer_scripts:
 
 # Social Sharing
 twitter:
-  username               : "johnpitchko"
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -105,7 +105,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://twitter.com/johnpitchko"
     - "https://instagram.com/johnpitchko"
     - "https://www.linkedin.com/in/johnpitchko/"
 
@@ -131,35 +130,33 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://www.johnpitchko.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/johnpitchko"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johnpitchko/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/johnpitchko"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/johnpitchko"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/johnpitchko/"
+
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/johnpitchko"
+      # url: ""
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johnpitchko/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "Github"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/johnpitchko"
     - label: "Bitbucket"
@@ -168,9 +165,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/johnpitchko"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/johnpitchko/"
+
 
 # Reading Files
 include:
