@@ -58,3 +58,28 @@ layout: single
     </tr>
   </tbody>
 </table>
+
+<h2>Positions closed this month</h2>
+
+{% assign closed-positions = site.data.closed-positions | where: "Closed month", page.month %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Play</th>
+      <th class="text-right">Gross P/L</th>
+      <th class="text-right">Fees</th>
+      <th class="text-right">Net P/L</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for p in closed-positions %}
+    <tr>
+      <td>{{ p.Play }}</td>
+      <td class="text-right">{{ p['Gross PnL'] | money_from_amount }}</td>
+      <td class="text-right">{{ p['Total fees'] | money_from_amount}}</td>
+      <td class="text-right">{{ p['Net PnL'] | money_from_amount}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
