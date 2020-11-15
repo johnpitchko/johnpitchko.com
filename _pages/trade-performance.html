@@ -3,8 +3,6 @@ title: Trade Performance
 permalink: /trade-performance/
 ---
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.8.4/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet">
-
 <p>My option trading performance, measured monthly. The goal is to 'beat the market', that is to outperform the S&P 500 index. The S&P 500 is an index that tracks the 500 largest US publicly-traded companies. The index is commonly used as a measure of the overal US stock market.</p>
 
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a> and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
@@ -13,7 +11,6 @@ permalink: /trade-performance/
 <div id="monthly-performance-table" class="table-dark"></div>
 
 <script>
-  // var trade_data = {{ site.data.trade-data | jsonify }};
   var trade_data_csv = {{ site.data.monthly-performance | jsonify }};
 
   // Render chart
@@ -21,18 +18,15 @@ permalink: /trade-performance/
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      // labels: trade_data.map(x => x.month),
       labels: trade_data_csv.map(x => x['Month']),
       datasets: [{
         label: 'My portfolio return (%)',
-        // data: trade_data.map(x => x.portfolio_return),
         data: trade_data_csv.map(x => x['Portfolio return']),
         fill: false,
         borderColor: 'rgba(153, 102, 255, 1)',
         lineTension: 0.3
       }, {
         label: 'SPY return (%)',
-        // data: trade_data.map(x => x.spx_return),
         data: trade_data_csv.map(x => x['SPY return']),
         fill: false,
         borderColor: 'rgba(255, 206, 86, 1)',
@@ -41,7 +35,7 @@ permalink: /trade-performance/
     },
     options: {
       title: {
-        text: 'Monthly trading performance, Jan 2020 to present',
+        text: 'Monthly trading performance',
         display: true
       },
       scales: {
@@ -78,7 +72,7 @@ permalink: /trade-performance/
     columns: [
       { title: 'Month', field: 'Month', hozAlign: 'left', headerHozAlign: 'left' },
       { title: 'Portfolio Return (%)', field: 'Portfolio return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
-      { title: 'SPX Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter }
+      { title: 'SPY Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter }
     ],
   });
 </script>
