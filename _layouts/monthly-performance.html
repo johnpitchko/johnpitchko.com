@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 ---
 
 {{ content }}
@@ -61,25 +62,40 @@ layout: single
 
 <h2>Positions closed this month</h2>
 
-{% assign closed-positions = site.data.closed-positions | where: "Closed month", page.month %}
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Play</th>
-      <th class="text-right">Gross P/L</th>
-      <th class="text-right">Fees</th>
-      <th class="text-right">Net P/L</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for p in closed-positions %}
-    <tr>
-      <td>{{ p.Play }}</td>
-      <td class="text-right">{{ p['Gross PnL'] | money_from_amount }}</td>
-      <td class="text-right">{{ p['Total fees'] | money_from_amount}}</td>
-      <td class="text-right">{{ p['Net PnL'] | money_from_amount}}</td>
-    </tr>
-  {% endfor %}
-  </tbody>
-</table>
+<div id="closed-positions-table" class="table-dark"></div>
+
+<script>
+  var myCountCalc = function(values, data, calcParams){
+    var calc = 0;
+
+    values.forEach(function(value) {
+      calc++;
+    });
+
+    return "Total closed: " + calc;
+  }
+
+  Papa.parse("{{ site.url }}/assets/closed-positions.csv", {
+    header: true,
+    download: true,
+	  complete: function(results) {
+      const filteredResults = results.data.filter(x => x['Closed month'] == "{{ page. month }}")
+
+      var table = new Tabulator("#closed-positions-table", {
+        data: filteredResults,
+        layout: 'fitDataFill',
+        cellHozAlign: 'right',
+        headerHozAlign: 'right',
+        columns: [
+          { title: 'Play', field: 'Play', hozAlign: 'left', headerHozAlign: 'left', bottomCalc: 'myCountCalc' },
+          { title: 'Gross P/L', field: 'Gross PnL', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160 },
+          { title: 'Fees', field: 'Total fees', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 140  },
+          { title: 'Net P/L', field: 'Net PnL',  formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160  }
+        ],
+      });
+	  }
+  });
+</script>
+
+<p><small>Powered by <a href="http://tabulator.info">Tabulator.js</a> and <a href="https://www.papaparse.com/">Papa Parse</a>.</small></p>
