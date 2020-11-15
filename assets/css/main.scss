@@ -1,0 +1,20 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.tabulator {
+  // font-size: 0.8rem;
+
+  .tabulator-footer .tabulator-calcs-holder .tabulator-row {
+      background: #212529 !important;
+  }
+
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.8.4/css/bootstrap/tabulator_bootstrap4.min.css');
