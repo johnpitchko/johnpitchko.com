@@ -9,47 +9,8 @@ permalink: /trade-performance/
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a> and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" width="400" height="400"></canvas>
-
-<script>
-  var trade_data_csv = {{ site.data.monthly-performance | jsonify }};
-
-  // Render chart
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: trade_data_csv.map(x => x['Month']),
-      datasets: [{
-        label: 'My portfolio return (%)',
-        data: trade_data_csv.map(x => x['Portfolio return']),
-        fill: false,
-        borderColor: 'rgba(153, 102, 255, 1)',
-        lineTension: 0.3
-      }, {
-        label: 'SPY return (%)',
-        data: trade_data_csv.map(x => x['SPY return']),
-        fill: false,
-        borderColor: 'rgba(255, 206, 86, 1)',
-        lineTension: 0.3
-      }]
-    },
-    options: {
-      title: {
-        text: 'Monthly trading performance',
-        display: true
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
-  });
-</script>
-
 <div id="monthly-performance-table-2" class="table-dark"></div>
+
 <script>
   // Custom Tabulator formatters
   function percentageFormatter(cell, formatterParams, onRendered) {
@@ -66,12 +27,9 @@ permalink: /trade-performance/
     return (calc / values.length).toFixed(2);
   }
 
-  Papa.parse("{{ site.url }}/assets/monthly-performance-transposed.csv", {
-	download: true,
-  header: true,
-	complete: function(results) {
-		var table = new Tabulator('#monthly-performance-table-2', {
-      data: results.data,
+  function buildTable(data) {
+    var table = new Tabulator('#monthly-performance-table-2', {
+      data: data,
       layout: 'fitColumns',
       cellHozAlign: 'right',
       headerHozAlign: 'right',
@@ -81,7 +39,51 @@ permalink: /trade-performance/
         { title: 'Portfolio Return (%)', field: 'Portfolio return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
         { title: 'SPY Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter }
       ]
-    })
-	}
-});
+    });
+  }
+
+  function buildChart(data) {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.map(x => x['Month']),
+        datasets: [{
+          label: 'My portfolio return (%)',
+          data: data.map(x => x['Portfolio return']),
+          fill: false,
+          borderColor: 'rgba(153, 102, 255, 1)',
+          lineTension: 0.3
+        }, {
+          label: 'SPY return (%)',
+          data: data.map(x => x['SPY return']),
+          fill: false,
+          borderColor: 'rgba(255, 206, 86, 1)',
+          lineTension: 0.3
+        }]
+      },
+      options: {
+        title: {
+          text: 'Monthly trading performance',
+          display: true
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+  Papa.parse("{{ site.url }}/assets/monthly-performance-transposed.csv", {
+	  download: true,
+    header: true,
+	  complete: function(results) {
+      buildChart(results.data);
+      buildTable(results.data);
+     }
+	});
 </script>
