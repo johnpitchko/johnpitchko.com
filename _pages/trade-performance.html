@@ -1,6 +1,7 @@
 ---
 title: Trade Performance
 permalink: /trade-performance/
+#classes: wide
 ---
 
 <p>My option trading performance, measured monthly. The goal is to 'beat the market', that is to outperform the S&P 500 index. The S&P 500 is an index that tracks the 500 largest US publicly-traded companies. The index is commonly used as a measure of the overal US stock market.</p>
@@ -8,7 +9,6 @@ permalink: /trade-performance/
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a> and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" width="400" height="400"></canvas>
-<div id="monthly-performance-table" class="table-dark"></div>
 
 <script>
   var trade_data_csv = {{ site.data.monthly-performance | jsonify }};
@@ -47,7 +47,10 @@ permalink: /trade-performance/
       }
     }
   });
+</script>
 
+<div id="monthly-performance-table-2" class="table-dark"></div>
+<script>
   // Custom Tabulator formatters
   function percentageFormatter(cell, formatterParams, onRendered) {
     return cell.getValue() + '%';
@@ -63,16 +66,22 @@ permalink: /trade-performance/
     return (calc / values.length).toFixed(2);
   }
 
-  // Render table
-  var table = new Tabulator("#monthly-performance-table", {
-    data: trade_data_csv,
-    layout: 'fitDataStretch',
-    cellHozAlign: 'right',
-    headerHozAlign: 'right',
-    columns: [
-      { title: 'Month', field: 'Month', hozAlign: 'left', headerHozAlign: 'left' },
-      { title: 'Portfolio Return (%)', field: 'Portfolio return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
-      { title: 'SPY Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter }
-    ],
-  });
+  Papa.parse("{{ site.url }}/assets/monthly-performance-transposed.csv", {
+	download: true,
+  header: true,
+	complete: function(results) {
+		var table = new Tabulator('#monthly-performance-table-2', {
+      data: results.data,
+      layout: 'fitColumns',
+      cellHozAlign: 'right',
+      headerHozAlign: 'right',
+      columns: [
+        { title: 'Month', field: 'Month', hozAlign: 'left', headerHozAlign: 'left' },
+        { title: 'Portfolio Return ($)', field: 'Change in balance', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' } },
+        { title: 'Portfolio Return (%)', field: 'Portfolio return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
+        { title: 'SPY Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter }
+      ]
+    })
+	}
+});
 </script>
