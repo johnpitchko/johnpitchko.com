@@ -7,7 +7,8 @@ classes: wide
 
 <h2>Monthly statement</h2>
 
-{% assign report = site.data.monthly-performance | find: "Month", page.month %}
+{% assign monthly-report = site.data.monthly-performance | find: "Month", page.month | jsonify %}
+{% assign closed-positions = site.data.closed-positions | where: "Closed month", page.month | jsonify %}
 
 <table class="table">
   <thead>
@@ -19,23 +20,23 @@ classes: wide
   <tbody>
     <tr>
       <td>Opening balance</td>
-      <td class="text-right"><strong>{{ report['Opening balance'] | money_from_amount }}</strong></td>
+      <td class="text-right"><strong>{{ monthly-report['Opening balance'] | money_from_amount }}</strong></td>
     </tr>
     <tr>
       <td>Deposits</td>
-      <td class="text-right">{{ report['Deposits'] | money_from_amount }}</td>
+      <td class="text-right">{{ monthly-report['Deposits'] | money_from_amount }}</td>
     </tr>
     <tr>
       <td>Withdrawals</td>
-      <td class="text-right">{{ report['Withdrawals'] | money_from_amount }}</td>
+      <td class="text-right">{{ monthly-report['Withdrawals'] | money_from_amount }}</td>
     </tr>
     <tr>
       <td>Change in balance</td>
-      <td class="text-right">{{ report['Change in balance'] | money_from_amount }}</td>
+      <td class="text-right">{{ monthly-report['Change in balance'] | money_from_amount }}</td>
     </tr>
     <tr>
       <td>Closing balance</td>
-      <td class="text-right"><strong>{{ report['Closing balance'] | money_from_amount }}</strong></td>
+      <td class="text-right"><strong>{{ monthly-report['Closing balance'] | money_from_amount }}</strong></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -43,7 +44,7 @@ classes: wide
     </tr>
     <tr>
       <td>Cumulative portfolio net P/L</td>
-      <td class="text-right">{{ report['Change in balance since open'] | money_from_amount }}</td>
+      <td class="text-right">{{ monthly-report['Change in balance since open'] | money_from_amount }}</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -51,11 +52,11 @@ classes: wide
     </tr>
     <tr>
       <td>Portfolio return</td>
-      <td class="text-right">{{ report['Portfolio return'] }}%</td>
+      <td class="text-right">{{ monthly-report['Portfolio return'] }}%</td>
     </tr>
     <tr>
       <td>SPY return</td>
-      <td class="text-right">{{ report['SPY return'] }}%</td>
+      <td class="text-right">{{ monthly-report['SPY return'] }}%</td>
     </tr>
   </tbody>
 </table>
@@ -76,26 +77,18 @@ classes: wide
     return "Total closed: " + calc;
   }
 
-  Papa.parse("{{ site.url }}/assets/closed-positions.csv", {
-    header: true,
-    download: true,
-	  complete: function(results) {
-      const filteredResults = results.data.filter(x => x['Closed month'] == "{{ page. month }}")
-
-      var table = new Tabulator("#closed-positions-table", {
-        data: filteredResults,
-        layout: 'fitDataFill',
-        cellHozAlign: 'right',
-        headerHozAlign: 'right',
-        columns: [
-          { title: 'Play', field: 'Play', hozAlign: 'left', headerHozAlign: 'left', bottomCalc: 'myCountCalc' },
-          { title: 'Gross P/L', field: 'Gross PnL', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160 },
-          { title: 'Fees', field: 'Total fees', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 140  },
-          { title: 'Net P/L', field: 'Net PnL',  formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160  }
-        ],
-      });
-	  }
+  var table = new Tabulator("#closed-positions-table", {
+    data: {{ closed-positions }},
+    layout: 'fitDataFill',
+    cellHozAlign: 'right',
+    headerHozAlign: 'right',
+    columns: [
+    { title: 'Play', field: 'Play', hozAlign: 'left', headerHozAlign: 'left', bottomCalc: 'myCountCalc' },
+    { title: 'Gross P/L', field: 'Gross PnL', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160 },
+    { title: 'Fees', field: 'Total fees', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 140  },
+    { title: 'Net P/L', field: 'Net PnL',  formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160  },
+    ],
   });
 </script>
 
-<p><small>Powered by <a href="http://tabulator.info">Tabulator.js</a> and <a href="https://www.papaparse.com/">Papa Parse</a>.</small></p>
+<p><small>Powered by <a href="http://tabulator.info">Tabulator.js</a>.</small></p>
