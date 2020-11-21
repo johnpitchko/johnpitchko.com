@@ -1,14 +1,14 @@
 ---
 title: Trade Performance
 permalink: /trade-performance/
-#classes: wide
 ---
 
 <p>My option trading performance, measured monthly. The goal is to 'beat the market', that is to outperform the S&P 500 index. The S&P 500 is an index that tracks the 500 largest US publicly-traded companies. The index is commonly used as a measure of the overal US stock market.</p>
 
-<p>Powered by <a href="https://www.chartjs.org">ChartJS</a> and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
+<p>Powered by <a href="https://www.chartjs.org">ChartJS</a>, <a href='https://www.papaparse.com/'>Papa Parse</a>, and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" width="400" height="400"></canvas>
+<canvas id="return-cumulative-chart"></canvas>
 <div id="monthly-performance-table-2" class="table-dark"></div>
 
 <script>
@@ -34,56 +34,62 @@ permalink: /trade-performance/
       cellHozAlign: 'right',
       headerHozAlign: 'right',
       columns: [
-        { title: 'Month', field: 'Month', hozAlign: 'left', headerHozAlign: 'left' },
-        { title: 'Portfolio Return ($)', field: 'Change in balance', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' } },
-        { title: 'Portfolio Return (%)', field: 'Portfolio return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
-        { title: 'SPY Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter }
+      { title: 'Month', field: 'Month', hozAlign: 'left', headerHozAlign: 'left' },
+      { title: 'Return, monthly', field: 'Change in balance', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' } },
+      { title: 'Return, cumulative', field: 'Cumulative net P/L', formatter: 'money', formatterParams: { symbol: '$' }, },
+      { title: 'Portfolio Return', field: 'Portfolio return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
+      { title: 'SPY Return', field: 'SPY return', formatter: percentageFormatter, bottomCalc: percentageCalc, bottomCalcFormatter: percentageFormatter },
       ]
     });
   }
 
   function buildChart(data) {
+    Chart.scaleService.updateScaleDefaults('linear', { ticks: { beginAtZero: true } } );
+
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: data.map(x => x['Month']),
         datasets: [{
           label: 'My portfolio return (%)',
           data: data.map(x => x['Portfolio return']),
           fill: false,
           borderColor: 'rgba(153, 102, 255, 1)',
-          lineTension: 0.3
+          lineTension: 0.3,
         }, {
           label: 'SPY return (%)',
           data: data.map(x => x['SPY return']),
           fill: false,
           borderColor: 'rgba(255, 206, 86, 1)',
-          lineTension: 0.3
-        }]
+          lineTension: 0.3,
+        }],
+        labels: data.map(x => x['Month']),
       },
-      options: {
-        title: {
-          text: 'Monthly trading performance',
-          display: true
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
+    });
+
+    var x = document.getElementById('return-cumulative-chart').getContext('2d');
+    var y = new Chart(x, {
+      type: 'line',
+      data: {
+        datasets: [{
+          label: 'Return, cumulative ($)',
+          data: data.map(x => x['Cumulative net P/L']),
+          fill: false,
+          borderColor: 'rgba(100,200,300, 1)',
+          lineTension: 0.3,
+          borderDash: [5, 5],
+        }],
+        labels: data.map(x => x['Month']),
+      },
     });
   }
 
   Papa.parse("{{ site.url }}/assets/monthly-performance-transposed.csv", {
-	  download: true,
+    download: true,
     header: true,
-	  complete: function(results) {
+    complete: function(results) {
       buildChart(results.data);
       buildTable(results.data);
-     }
-	});
+    }
+  });
 </script>
