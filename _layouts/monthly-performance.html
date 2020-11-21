@@ -7,7 +7,7 @@ classes: wide
 
 <h2>Monthly statement</h2>
 
-{% assign monthly-report = site.data.monthly-performance | find: "Month", page.month | jsonify %}
+{% assign monthly-report = site.data.monthly-performance | find: "Month", page.month %}
 {% assign closed-positions = site.data.closed-positions | where: "Closed month", page.month | jsonify %}
 
 <table class="table">
