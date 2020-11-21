@@ -83,7 +83,7 @@ classes: wide
     cellHozAlign: 'right',
     headerHozAlign: 'right',
     columns: [
-    { title: 'Play', field: 'Play', hozAlign: 'left', headerHozAlign: 'left', bottomCalc: 'myCountCalc' },
+    { title: 'Play', field: 'Play', hozAlign: 'left', headerHozAlign: 'left', bottomCalc: myCountCalc },
     { title: 'Gross P/L', field: 'Gross PnL', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160 },
     { title: 'Fees', field: 'Total fees', formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 140  },
     { title: 'Net P/L', field: 'Net PnL',  formatter: 'money', formatterParams: { symbol: '$' }, bottomCalc: 'sum', bottomCalcFormatter: 'money', bottomCalcFormatterParams: { symbol: '$' }, minWidth: 160  },
