@@ -51,18 +51,18 @@ permalink: /trade-performance/
     data: {
       datasets: [{
         label: 'My portfolio return (%)',
-        data: {{ monthly-performance | map: 'Portfolio return'}},
+        data: {{ monthly-performance }}.map(x => x['Portfolio return']),
         fill: false,
         borderColor: 'rgba(153, 102, 255, 1)',
         lineTension: 0.3,
       }, {
         label: 'SPY return (%)',
-        data: {{ monthly-performance | map: 'SPY return' }},
+        data: {{ monthly-performance }}.map(x => x['SPY return']),
         fill: false,
         borderColor: 'rgba(255, 206, 86, 1)',
         lineTension: 0.3,
       }],
-      labels: {{ monthly-performance | map: 'Month' }},
+      labels: {{ monthly-performance }}.map(x => x['Month']),
     },
   });
 
@@ -72,13 +72,13 @@ permalink: /trade-performance/
     data: {
       datasets: [{
         label: 'Return, cumulative ($)',
-        data: {{ monthly-performance | map: 'Cumulative net P/L' }},
+        data: {{ monthly-performance }}.map(x => x['Cumulative net P/L']),
         fill: false,
         borderColor: 'rgba(100,200,300, 1)',
         lineTension: 0.3,
-        borderDash: [5, 5],
+        // borderDash: [5, 5],
       }],
-      labels: {{ monthly-performance | map: 'Month' }},
+      labels: {{ monthly-performance }}.map(x => x['Month']),
     },
   });
 </script>
