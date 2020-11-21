@@ -11,7 +11,6 @@ BIDU earnings strangle Aug-20,Short strangle,290,283.55,-123,-129.45,167,12.9,15
 BYND short iron condor Aug-20,Short iron condor,708,697.05,-204,-214.95,504,21.9,482.1,Aug '20
 CHGG earnings iron condor Aug-20,Short strangle,573,566.55,-150,-156.45,423,12.9,410.1,Aug '20
 CHWY earnings strangle Sep-20,Short strangle,525,518.55,-310,-316.45,215,12.9,202.1,Sep '20
-CHWY strangle Sep-20,Skewed short strangle,4264,4235.2,-1830,-1836,2434,34.8,-198.85,Oct '20
 CLX earnings iron condor Jul-20,Iron condor,300,292.05,-125,-132.95,175,15.9,159.1,Aug '20
 DDOG earnings short strangle Aug-20,Short strangle,1672,1664.05,-1283,-1295.9,389,20.85,368.15,Aug '20
 DIS short put Jul-20,Short put,1790,1777.85,-1340,-1347.2,450,19.35,430.65,Aug '20
@@ -22,16 +21,13 @@ EBAY short put Oct-20,Short put,205,199.3,-100,-105.7,105,11.4,93.59999999999999
 EEM jade lizard Feb-20,Jade lizard,1545,1526.37,-1459,-1471.9,86,31.53,54.47,Jul '20
 EEM straddle Nov-19,Short straddle,9038,9012.07,-9056,-9064.450000000001,-18,34.38,-52.38,Feb '20
 ETSY earnings short iron condor,Short iron condor,550,539.05,-200,-210.95,350,21.9,328.1,Aug '20
-EWZ covered call Jan-20,Covered call,-6880,-6967.18,-714,-745.35,-7594,118.53,895.95,Oct '20
 F covered call Jul-19,Covered call,-2820,-2858.07,-36,-50.4,-2856,52.47,141.48,Mar '20
 FFIV long stock May-19,Long stock,-1510,-1514.95,1600,1595.05,90,9.9,80.09999999999989,Nov '20
 FL earnings strangle Aug-20,Short strangle,1400,1377.65,-1392,-1404.45,8,34.8,-26.8,Sep '20
 FTNT earnings short iron condor,Short iron condor,500,489.05,-370,-380.95,130,21.9,108.1,Aug '20
 FXI straddle Nov-19,Short straddle,6052,5984.67,-6033,-6044.2,19,78.53,-59.53,Jul '20
 GDX covered call Jan-20,Covered call,-5139.79,-5176.06,5518,5492.2,378.21,62.07,316.14,Apr '20
-GDX short put Sep-20,Short put,1098,1080.9,-800,-801.5,298,18.6,-219.9,Oct '20
 GDX straddle Jun-20,Short straddle,426,419.55,-319,-325.45,107,12.9,94.09999999999999,Jun '20
-GDXJ short call Jul-20,Short strangle,3773,3735.8,-2635,-2641,1138,43.2,172.25,Oct '20
 GDXJ strangle Jun-20,Short strangle,922,909.1,-632,-639.95,290,20.85,269.15,Jun '20
 GILD short put Jun-20,Short put,235,229.3,-115,-120.7,120,11.4,108.6,Jun '20
 GLD put credit spread Aug-20,Put credit spread,310,302.05,-116,-123.95,194,15.9,178.1,Sep '20
@@ -39,7 +35,6 @@ GLD put credit spread Sep-20,Put credit spread,435,425.55,-210,-219.45,225,18.9,
 GLD strangle Dec-19,Short strangle,918,876.11,-1626,-1647.95,-708,63.84,-771.84,Jan '20
 HD earnings iron condor Aug-20,Short iron condor,389,381.05,-185,-192.95,204,15.9,188.1,Aug '20
 IBM earnings iron condor Jul-20,Iron condor,168,160.05,-75,-82.95,93,15.9,77.09999999999999,Jul '20
-INTC earnings short put Aug-20,Short put,109,49.05,-5726,-5729.75,-5617,63.7,-1302,Oct '20
 IWM calendar spread Dec-19,Calendar spread,-303,-318.95,285,269.05,-18,31.9,-49.9000000000001,Jan '20
 IWM put credit spread Mar-20,Put credit spread,3998,3964.7,-3607,-3619.45,391,45.75,345.249999999998,Aug '20
 IYR short put Jun-20,Short put,208,202.3,-100,-105.7,108,11.4,96.59999999999999,Jul '20
