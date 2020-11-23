@@ -9,12 +9,13 @@
 @import "minimal-mistakes"; // main partials
 
 .tabulator {
-  // font-size: 0.8rem;
-
   .tabulator-footer .tabulator-calcs-holder .tabulator-row {
       background: #212529 !important;
   }
+}
 
+canvas {
+  margin: 30px 0px 30px 0px;
 }
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.8.4/css/bootstrap/tabulator_bootstrap4.min.css');
