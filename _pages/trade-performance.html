@@ -10,6 +10,8 @@ permalink: /trade-performance/
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a> and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" height="300"></canvas>
+
+<strong>Reported P/L, cumulative</strong> is the profit/loss reported by the broker. It includes open profits/losses in long stock positions, which I am holding until they can be closed for a profit. Many of these long stock positions lost value in the 2020 market meltdown, which is dragging down the total portfolio return. <strong>Position P/L</strong> values are the profits or losses from closing options (and a few stock) positions in the month.
 <canvas id="return-cumulative-chart" height="300"></canvas>
 <div id="monthly-performance-table-2" class="table-dark"></div>
 
@@ -69,7 +71,7 @@ permalink: /trade-performance/
     type: 'line',
     data: {
       datasets: [{
-        label: 'Return, cumulative',
+        label: 'Reported P/L, cumulative',
         data: {{ monthly-performance }}.map(x => x['Cumulative net P/L']),
         borderColor: 'rgba(100,200,300, 1)',
       }, {
