@@ -71,13 +71,24 @@ permalink: /trade-performance/
     type: 'line',
     data: {
       datasets: [{
-        label: 'Return, cumulative ($)',
+        label: 'Return, cumulative',
         data: {{ monthly-performance }}.map(x => x['Cumulative net P/L']),
         fill: false,
         borderColor: 'rgba(100,200,300, 1)',
         lineTension: 0.3,
         // borderDash: [5, 5],
+      }, {
+        label: 'Position P/L, monthly',
+        data: {{ monthly-performance }}.map(x => x['Position net P/L']),
+        borderColor: 'rgba(200, 300, 100, 1)',
+        lineTension: 0.3,
+      }, {
+        label: 'Position P/L, cumulative',
+        data: {{ monthly-performance }}.map(x => x['Position cumulative net P/L']),
+        borderColor: 'rgba(300,100,200,1)',
+        lineTension: 0.3,
       }],
+
       labels: {{ monthly-performance }}.map(x => x['Month']),
     },
   });
