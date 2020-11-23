@@ -10,6 +10,8 @@ permalink: /trade-performance/
 <p>Powered by <a href="https://www.chartjs.org">ChartJS</a> and <a href="http://tabulator.info/">Tabulator.js</a>. S&P 500 performance data from <a href="https://ycharts.com/indicators/sp_500_monthly_return">YCharts</a>.</p>
 
 <canvas id="myChart" height="300"></canvas>
+
+<strong>Reported P/L, cumulative</strong> is the profit/loss reported by the broker. It includes open profits/losses in long stock positions, which I am holding until they can be closed for a profit. Many of these long stock positions lost value in the 2020 market meltdown, which is dragging down the total portfolio return. <strong>Position P/L</strong> values are the profits or losses from closing options (and a few stock) positions in the month.
 <canvas id="return-cumulative-chart" height="300"></canvas>
 <div id="monthly-performance-table-2" class="table-dark"></div>
 
@@ -44,6 +46,7 @@ permalink: /trade-performance/
   });
 
   Chart.scaleService.updateScaleDefaults('linear', { ticks: { beginAtZero: true } } );
+  Chart.defaults.global.datasets.line = { fill: false, lineTension: 0.3 };
 
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
@@ -54,13 +57,10 @@ permalink: /trade-performance/
         data: {{ monthly-performance }}.map(x => x['Portfolio return']),
         fill: false,
         borderColor: 'rgba(153, 102, 255, 1)',
-        lineTension: 0.3,
       }, {
         label: 'SPY return (%)',
         data: {{ monthly-performance }}.map(x => x['SPY return']),
-        fill: false,
         borderColor: 'rgba(255, 206, 86, 1)',
-        lineTension: 0.3,
       }],
       labels: {{ monthly-performance }}.map(x => x['Month']),
     },
@@ -71,12 +71,17 @@ permalink: /trade-performance/
     type: 'line',
     data: {
       datasets: [{
-        label: 'Return, cumulative ($)',
+        label: 'Reported P/L, cumulative',
         data: {{ monthly-performance }}.map(x => x['Cumulative net P/L']),
-        fill: false,
         borderColor: 'rgba(100,200,300, 1)',
-        lineTension: 0.3,
-        // borderDash: [5, 5],
+      }, {
+        label: 'Position P/L, monthly',
+        data: {{ monthly-performance }}.map(x => x['Position net P/L']),
+        borderColor: 'rgba(200, 300, 100, 1)',
+      }, {
+        label: 'Position P/L, cumulative',
+        data: {{ monthly-performance }}.map(x => x['Position cumulative net P/L']),
+        borderColor: 'rgba(300,100,200,1)',
       }],
       labels: {{ monthly-performance }}.map(x => x['Month']),
     },
