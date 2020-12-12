@@ -11,3 +11,5 @@ I also spent 11 years as a **_Project Manager_** at [Shell Canada](https://www.s
 
 [^1]: Formerly known as both Calgary Technologies and Innovate Calgary.
 [^2]: Intense bootcamp-style programs lasting between 3 and 6 months.
+
+_Need a [shorter bio](/100-word-bio/)?_
