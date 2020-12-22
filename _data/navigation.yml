@@ -7,8 +7,11 @@ main:
     url: /blog
     # identifier: blog
 
-  - title: Trading
+  - title: Trade Performance
     url: /trade-performance
+  - title: My Trading Plan
+    url: /my-trading-plan
+
 
 
   # - title: One-line Book Summaries
