@@ -1,6 +1,4 @@
 Play,Strategy,Open gross,Open net,Close gross,Close net,Gross PnL,Total fees,Net PnL,Closed month
-EBAY strangle Nov-20,Short strangle,200,193.55,-208,-214.45,-8,12.9,-20.9,
-FB put credit spread Nov-20,Put credit spread,260,252.05,-180,-187.95,80,15.9,64.09999999999989,
 TSLA put credit spread Feb-20,Bull put spread,405,398.43,-225,-231.45,180,13.02,166.98,Apr '20
 GDX covered call Jan-20,Covered call,-5139.79,-5176.06,5518,5492.2,378.21,62.07,316.14,Apr '20
 SBUX short put Apr-20,Short put,205,199.3,-98,-103.7,107,11.4,95.59999999999999,Apr '20
@@ -34,6 +32,7 @@ SLV strangle Aug-20,Short strangle,245,238.55,-115,-121.45,130,12.9,117.1,Aug '2
 BABA put credit spread Aug-20,Put credit spread,303,296.55,-140,-146.45,163,12.9,150.1,Aug '20
 IWM put credit spread Mar-20,Put credit spread,3998,3964.7,-3607,-3619.45,391,45.75,345.249999999998,Aug '20
 AMZN put credit spread Aug-20 #2,Put credit spread,316,309.55,-92,-98.45,224,12.9,211.1,Aug '20
+LOGI earnings skewed strangle Oct-20,Skewed short strangle,3922,3891.25,-3684,-3700.45,238,47.2,190.8,Dec '20
 QQQ strangle Dec-19,Short strangle,857,823.11,-840,-858.65,17,52.54,-35.5400000000001,Feb '20
 EEM straddle Nov-19,Short straddle,9038,9012.07,-9056,-9064.450000000001,-18,34.38,-52.38,Feb '20
 SPCE front call ratio spread Feb-20,Front call ratio spread,161,153.78,-107,-114.21,54,14.43,39.57,Feb '20
@@ -76,11 +75,13 @@ GOOS short put Nov-20,Short put,220,213.55,-100,-106.45,120,12.9,107.1,Nov '20
 JD strangle Sep-20,Short strangle,2721,2690.25,-2268,-2278.95,453,41.7,411.3,Nov '20
 PFE short put Nov-20,Short put,220,213.55,-106,-112.45,114,12.9,101.1,Nov '20
 PLUG straddle Sep-20,Short straddle,1524,1481.85,-1774,-1791.4,-250,59.55,-309.55,Nov '20
+EBAY strangle Nov-20,Short strangle,200,193.55,-208,-214.45,-8,12.9,-20.9,Nov '20
+CHWY strangle Sep-20,Skewed short strangle,4264,4235.2,-3380,-3393.95,884,42.75,841.25,Nov '20
+FB put credit spread Nov-20,Put credit spread,260,252.05,-180,-187.95,80,15.9,64.09999999999989,Nov '20
 AAPL short put Sep-20,Short put,315,309.3,-95,-100.7,220,11.4,208.6,Oct '20
 XLU iron condor Apr-20,Covered call,-5253,-5325.85,5455,5437.6,202,90.25,111.75,Oct '20
 SLV straddle Oct-20,Short straddle,867,857.55,-597,-606.45,270,18.9,251.1,Oct '20
 NIO short straddle Sep-20,Short straddle,1712,1691.9,-1465,-1480.15,247,35.25,211.75,Oct '20
-CHWY strangle Sep-20,Skewed short strangle,4264,4235.2,-3380,-3393.95,884,42.75,841.25,Oct '20
 SMAR earnings strangle Sep-20,Short strangle,348,341.55,-133,-139.45,215,12.9,202.1,Sep '20
 SWBI earnings strangle Sep-20,Short strangle,290,283.55,-180,-186.45,110,12.9,97.09999999999999,Sep '20
 SLV straddle Aug-20 #2,Short straddle,383,376.55,-280,-286.45,103,12.9,90.09999999999999,Sep '20
